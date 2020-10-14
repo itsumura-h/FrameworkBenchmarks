@@ -1,19 +1,18 @@
 # framework
-import basolato/routing
+import basolato
 # controller
+import app/controllers/welcome_controller
 import app/controllers/benchmark_controller
 
-settings:
-  port = Port(8080)
+var routes = newRoutes()
 
-routes:
-  # Framework
-  error Http404: http404Route
-  error Exception: exceptionRoute
+routes.get("/", welcome_controller.index)
 
-  get "/json": route(newBenchmarkController(request).json())
-  get "/plaintext": route(newBenchmarkController(request).plainText())
-  get "/db": route(newBenchmarkController(request).db())
-  get "/queries": route(newBenchmarkController(request).query())
-  get "/fortunes": route(newBenchmarkController(request).fortune())
-  get "/updates": route(newBenchmarkController(request).update())
+routes.get("/json", benchmark_controller.json)
+routes.get("/plaintext", benchmark_controller.plainText)
+routes.get("/db", benchmark_controller.db)
+routes.get("/queries", benchmark_controller.queries)
+routes.get("/fortunes", benchmark_controller.fortunes)
+routes.get("/json", benchmark_controller.updates)
+
+serve(routes, 8080)

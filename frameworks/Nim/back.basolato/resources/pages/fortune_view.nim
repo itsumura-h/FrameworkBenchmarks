@@ -1,8 +1,7 @@
 import json
 import basolato/view
-import ../../app/domain/models/fortune/fortune_entity
 
-proc impl(title:string, data:seq[Fortune]):string = tmpli html"""
+proc impl(title:string, data:seq[JsonNode]):string = tmpli html"""
 <!DOCTYPE html>
 <html>
 
@@ -18,8 +17,8 @@ proc impl(title:string, data:seq[Fortune]):string = tmpli html"""
     </tr>
     $for row in data{
       <tr>
-        <td>$(row.id)</td>
-        <td>$(row.message)</td>
+        <td>$(row["id"].get)</td>
+        <td>$(row["message"].get)</td>
       </tr>
     }
   </table>
@@ -28,6 +27,6 @@ proc impl(title:string, data:seq[Fortune]):string = tmpli html"""
 </html>
 """
 
-proc fortuneView*(data=newSeq[Fortune]()):string =
+proc fortuneView*(this:View, data=newSeq[JsonNode]()):string =
   let title = "Fortunes"
   return impl(title, data)

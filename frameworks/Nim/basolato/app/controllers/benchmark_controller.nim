@@ -1,35 +1,32 @@
-import json, random, algorithm, cgi, sugar, sequtils
-from strutils import parseInt
+import json, random, algorithm, cgi, sequtils, strutils
 # framework
 import basolato/controller
 import allographer/query_builder
+# model
+import ../domain/models/fortune/fortune_entity
 # view
 import ../../resources/pages/fortune_view
+# const
+randomize()
+const range1_10000 = 1..10000
 
-type BenchmarkController* = ref object of Controller
-
-proc newBenchmarkController*(request:Request):BenchmarkController =
-  randomize()
-  return BenchmarkController.newController(request)
-
-
-proc json*(this:BenchmarkController):Response =
+proc json*(request:Request, params:Params):Future[Response] {.async.} =
   return render(%*{"message":"Hello, World!"})
 
-proc plainText*(this:BenchmarkController):Response =
+proc plainText*(request:Request, params:Params):Future[Response] {.async.} =
   var headers = newHeaders()
   headers.set("Content-Type", "text/plain; charset=UTF-8")
-  return render("Hello, World!").setHeader(headers)
+  return render("Hello, World!", headers)
 
-proc db*(this:BenchmarkController):Response =
+proc db*(request:Request, params:Params):Future[Response] {.async.} =
   let i = rand(1..10000)
-  let response = RDB().table("world").find(i)
+  let response = await rdb().table("world").asyncFind(i)
   return render(%*response)
 
-proc query*(this:BenchmarkController):Response =
+proc queries*(request:Request, params:Params):Future[Response] {.async.} =
   var countNum:int
   try:
-    countNum = this.request.params["queries"].parseInt()
+    countNum = params.queryParams["queries"].getInt
   except:
     countNum = 1
 
@@ -41,27 +38,31 @@ proc query*(this:BenchmarkController):Response =
   var response = newJArray()
   for _ in 1..countNum:
     let i = rand(1..10000)
-    let data = RDB().table("world").find(i)
+    let data = await rdb().table("world").asyncFind(i)
     response.add(data)
   return render(%*response)
 
-proc fortune*(this:BenchmarkController):Response =
-  var rows = RDB().table("Fortune").orderBy("message", Asc).get()
-  rows = rows.mapIt(%*{
-    "id": it["id"],
-    "message": xmlEncode(it["message"].getStr)
-  })
-  rows.add(%*{
-    "id": 0,
-    "message": "Additional fortune added at request time."}
+proc fortunes*(request:Request, params:Params):Future[Response] {.async.} =
+  var rows = await rdb().table("Fortune").orderBy("message", Asc).asyncGetPlain()
+  var newRows = rows.mapIt(
+    Fortune(
+      id: it[0].parseInt,
+      message: xmlEncode(it[1])
+    )
   )
-  rows = rows.sortedByIt(it["message"].getStr)
-  return render(this.view.fortuneView(rows))
+  newRows.add(
+    Fortune(
+      id:0,
+      message:"Additional fortune added at request time."
+    )
+  )
+  newRows = newRows.sortedByIt(it.message)
+  return render(fortuneView(newRows))
 
-proc update*(this:BenchmarkController):Response =
+proc updates*(request:Request, params:Params):Future[Response] {.async.} =
   var countNum:int
   try:
-    countNum = this.request.params["queries"].parseInt()
+    countNum = params.requestParams.get("queries").parseInt()
   except:
     countNum = 1
 
@@ -70,12 +71,14 @@ proc update*(this:BenchmarkController):Response =
   elif countNum > 500:
     countNum = 500
 
-  var response = newJArray()
-  transaction:
-    for _ in 1..countNum:
-        let i = rand(1..10000)
-        let newRandomNumber = rand(1..10000)
-        discard RDB().table("world").find(i)
-        RDB().table("world").where("id", "=", i).update(%*{"randomNumber": newRandomNumber})
-        response.add(%*{"id":i, "randomNumber": newRandomNumber})
-  return render(response)
+  var response = newSeq[JsonNode](countNum)
+  for i in 1..countNum:
+    let index = rand(range1_10000)
+    let number = rand(range1_10000)
+    discard await rdb().table("world").asyncFindPlain(index)
+    await rdb()
+      .table("world")
+      .where("id", "=", index)
+      .asyncUpdate(%*{"randomNumber": number})
+    response[i-1] = %*{"id":index, "randomNumber": number}
+  return render(%response)
