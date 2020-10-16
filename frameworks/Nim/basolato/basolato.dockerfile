@@ -19,6 +19,6 @@ RUN apk update && \
 ADD ./ /basolato
 WORKDIR /basolato
 
-RUN nimble install -y
+RUN nimble install -y https://github.com/itsumura-h/nim-basolato
 RUN ducere build
 CMD ./main
