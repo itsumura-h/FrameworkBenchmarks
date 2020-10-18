@@ -5,7 +5,7 @@ putEnv("DB_CONNECTION", "tfb-database:5432")
 putEnv("DB_USER", "benchmarkdbuser")
 putEnv("DB_PASSWORD", "benchmarkdbpass")
 putEnv("DB_DATABASE", "hello_world")
-putEnv("DB_MAX_CONNECTION", "95")
+putEnv("DB_MAX_CONNECTION", "1900")
 putEnv("DB_TIMEOUT", "50")
 # Logging
 putEnv("LOG_IS_DISPLAY", "false")

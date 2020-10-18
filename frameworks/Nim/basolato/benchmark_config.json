@@ -17,7 +17,7 @@
         "language": "Nim",
         "flavor": "None",
         "orm": "Full",
-        "platform": "httpbeast",
+        "platform": "None",
         "webserver": "None",
         "os": "Linux",
         "database_os": "Linux",
