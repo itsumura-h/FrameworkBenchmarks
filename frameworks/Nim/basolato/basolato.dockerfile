@@ -20,5 +20,5 @@ ADD ./ /basolato
 WORKDIR /basolato
 
 RUN nimble install -y https://github.com/itsumura-h/nim-basolato
-RUN ducere build
+RUN nim c -d:relese --gc:v2 --threads:on --threadAnalysis:off main
 CMD ./main
