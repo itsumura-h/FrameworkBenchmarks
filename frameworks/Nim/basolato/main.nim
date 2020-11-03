@@ -14,4 +14,4 @@ routes.get("/queries", benchmark_controller.query)
 routes.get("/fortunes", benchmark_controller.fortune)
 routes.get("/updates", benchmark_controller.update)
 
-serve(routes, 8080)
+serve(routes)

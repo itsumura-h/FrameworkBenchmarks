@@ -20,5 +20,15 @@ ADD ./ /basolato
 WORKDIR /basolato
 
 RUN nimble install -y https://github.com/itsumura-h/nim-basolato
-RUN nim c -d:relese --gc:v2 --threads:on --threadAnalysis:off main
-CMD ./main
+RUN ducere build -p:5000,5001,5002,5003
+
+FROM nginx:alpine
+
+RUN apk update && \
+    apk upgrade --no-cache && \
+    apk add --no-cache \
+        libpq
+
+COPY --from=0 /basolato /basolato
+WORKDIR /basolato
+CMD chmod 755 run.sh && ./run.sh
