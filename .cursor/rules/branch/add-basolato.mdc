@@ -1,0 +1,67 @@
+---
+description: add-basolatoブランチでの開発時に読み込む
+alwaysApply: false
+---
+results可視化サイトとGitHub Pages公開ルール
+===
+
+このブランチで実装することは以下の通りです。
+- `results/` 配下の最も新しいフォルダ内にあるベンチマーク結果JSONを入力として扱う
+- GitHub Actions で結果JSONを読み込み、各Webフレームワークの測定結果を反映した静的サイトを生成する
+- 生成済みの静的成果物を GitHub Pages でホスティング可能な構成にする
+- 実装開始前に、どのJSON項目を可視化対象にするかを明文化する
+- 実装中は、結果JSONの実データ構造と設計の差分が見つかったらこのファイルの `調査結果・設計まとめ` を更新する
+
+## 進捗
+- [x] `results/` 配下の最新フォルダを決定する規則を整理する
+- [x] 最新フォルダ内の `results.json` を入力に使う前提で読み込み方法を整理する
+- [x] `results/20260327152600/results.json` を基準に、可視化に必要な主要キーを整理する
+- [x] `frameworks`、`verify`、`completed`、`concurrencyLevels`、`pipelineConcurrencyLevels`、`queryIntervals`、`cachedQueryIntervals`、`testMetadata` の扱いを定義する
+- [x] どの単位で比較するかを決める
+- [x] フレームワーク単位か、テスト種別単位か、測定回単位かを明確にする
+- [x] 1回分の結果表示だけで始めるか、複数回比較まで含めるかを決める
+- [x] GitHub Pages 向けの公開方式を決める
+- [x] GitHub Actions の実行契機を決める
+- [x] 手動実行、push契機、scheduled 実行のどれを採用するかを決める
+- [x] Actions 内の静的サイト生成方式を決める
+- [x] JSONを整形してHTMLを出力するスクリプト構成を決める
+- [x] 生成先ディレクトリと Pages 配備手順を決める
+- [x] 画面要件を決める
+- [x] 一覧、絞り込み、ソート、グラフ種別、検証ステータス表示の要否を決める
+- [x] データ欠損や `warn` / `fail` を含む結果の見せ方を決める
+- [x] 実装タスクを分割する
+- [x] JSON収集・変換スクリプト
+- [x] 静的HTML生成
+- [x] Actions ワークフロー
+- [x] Pages公開設定
+- [x] README または運用手順書の整備
+- [x] 動作確認項目を定義する
+- [x] ローカルでの静的生成確認
+- [ ] JSON差し替え時の再生成確認（手動・CI）
+- [ ] GitHub Actions 実行結果の確認（フォーク先で要確認）
+- [ ] GitHub Pages 配備後の表示確認（Settings で Actions ソース有効化後）
+
+## 参考資料
+- `.cursor/rules/project.mdc`
+- `.cursor/rules/branch.mdc`
+- `results/20260327152600/results.json`
+- `run.sh`
+- `tools/results-site/README.md`
+- GitHub Pages の静的サイト公開要件
+
+## 調査結果・設計まとめ
+- 現在のブランチ名は `add-basolato` であり、このファイルはブランチ名一致ルールとして読み込まれる
+- 対象入力は `results/` 配下の**子ディレクトリ名が辞書順で最大**のフォルダ内の `results.json` とする（`tools/results-site/generate_site.py` の `find_latest_results_json`）。命名が `YYYYMMDDhhmmss` のときは時系列と一致する
+- 可視化で使う主要キー（第1弾）
+  - メタ: `uuid`, `name`, `environmentDescription`, `git`, `startTime`, `completionTime`, `duration`, `concurrencyLevels`
+  - 行の主キー: `frameworks`（配列順で表を並べる）
+  - 検証: `verify`（フレームワーク名 → テスト種別 → pass|warn|fail）。列は出現した全 `verify` キーの和集合
+  - 付帯: `completed`（完了タイムスタンプ）、`testMetadata` は `name` が `frameworks` に含まれるエントリのみ突合して表示名・言語等
+  - 数値: `rawData[テスト種別][フレームワーク名]` は wrk ログ解析の結果配列（`toolset/utils/results.py` の `report_benchmark_results`）。各要素に `totalRequests`, `latencyAvg`, `startTime`, `endTime` 等。空オブジェクトのときはベンチ未実行または生ログ未解析の可能性があり、注記のみ表示
+- `pipelineConcurrencyLevels`, `queryIntervals`, `cachedQueryIntervals` は第1弾 HTML では本文に未使用（メタの並行レベルは `concurrencyLevels` のみ表示）。将来グラフ化の候補
+- `succeeded` / `failed` は第1弾では未表示（`verify` と `rawData` で足りる想定）
+- 比較の単位: **1回の `results.json` 内**で、行＝フレームワーク、列＝テスト種別（verify）。複数回 run の横比較はスコープ外（将来拡張）
+- 画面: 単一ページ `index.html`。一覧表（verify を色分け）。`rawData` にデータがあるテスト種別のみ数値表（概算 RPS 等）。絞り込み・ソート・グラフは未実装
+- CI: `.github/workflows/results-pages.yml` が `workflow_dispatch` と `results/**/results.json` 等変更の push で `_site` をビルドし `actions/upload-pages-artifact` → `deploy-pages`。リポジトリの Pages で **GitHub Actions** ソースを有効化すること
+- ローカル生成物 `_site/` は `.gitignore` に追加済み（リポジトリにコミットしない）
+- `results/**/*.txt` は `.gitignore` 対象。`results.json` は追跡可能
