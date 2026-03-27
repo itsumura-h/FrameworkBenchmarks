@@ -43,7 +43,7 @@ build/
 azure.err
 php-kohana/application/logs/
 php-fuel/fuel/app/logs/
-results/
+results/**/*.txt
 benchmark.cfg
 
 # Mac filesystem dust
@@ -69,4 +69,5 @@ benchmark.cfg
 
 # python
 .venv/
+_site/
 frameworks/CSharp/akazawayun.pro/Dockerfile

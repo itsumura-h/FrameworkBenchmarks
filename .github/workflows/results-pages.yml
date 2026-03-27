@@ -1,0 +1,50 @@
+# results/ 最新の results.json を静的 HTML に変換し GitHub Pages へ公開する。
+# 初回は Settings → Pages → Build and deployment → Source: GitHub Actions を選択すること。
+name: Deploy benchmark results site
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - master
+      - main
+    paths:
+      - "results/**/results.json"
+      - "tools/results-site/**"
+      - ".github/workflows/results-pages.yml"
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages-results-site"
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.14"
+
+      - name: Generate static site
+        run: python tools/results-site/generate_site.py --repo-root "${GITHUB_WORKSPACE}" --out "${GITHUB_WORKSPACE}/_site"
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4
