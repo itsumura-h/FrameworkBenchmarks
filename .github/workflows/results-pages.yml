@@ -8,6 +8,7 @@ on:
     branches:
       - master
       - main
+      - add-basolato
     paths:
       - "results/**/results.json"
       - "tools/results-site/**"
