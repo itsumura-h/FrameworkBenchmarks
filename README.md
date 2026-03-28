@@ -98,14 +98,6 @@ The community has consistently helped in making these tests better, and we welco
 
 Join in the conversation in the [Discussions tab](https://github.com/TechEmpower/FrameworkBenchmarks/discussions), on [Twitter](https://twitter.com/tfbenchmarks), or chat with us on [Freenode](https://webchat.freenode.net/) at `#techempower-fwbm`. 
 
-
-```
-./tfb --mode verify --test basolato
-./tfb --mode verify --test basolato --type cached-query
-./tfb --mode benchmark --test basolato --type cached-query
-./tfb --mode benchmark --test basolato 
-```
-
 - nim
   - basolato
   - asynchttpserver

@@ -5,14 +5,14 @@
 ## ローカル実行
 
 ```bash
-python3 tools/results-site/generate_site.py --repo-root . --out ./_site
+python3 toolset/results-site/generate_site.py --repo-root . --out ./_site
 # ./_site/index.html をブラウザで開く
 ```
 
 特定の JSON を指定する場合:
 
 ```bash
-python3 tools/results-site/generate_site.py --repo-root . --input results/20260327152600/results.json --out ./_site
+python3 toolset/results-site/generate_site.py --repo-root . --input results/20260327152600/results.json --out ./_site
 ```
 
 ## Docker（ローカルで生成して手元で確認）
@@ -21,7 +21,7 @@ python3 tools/results-site/generate_site.py --repo-root . --input results/202603
 
 ```bash
 # リポジトリルートで実行
-docker build -t fb-results-site -f tools/results-site/Dockerfile tools/results-site
+docker build -t fb-results-site -f toolset/results-site/Dockerfile toolset/results-site
 
 docker run --rm \
   -v "$(pwd):/workspace:ro" \
@@ -39,7 +39,7 @@ python3 -m http.server --directory _site 8765
 特定の `results.json` を使う場合（同様にビルド＋実行を1行）:
 
 ```bash
-docker build -t fb-results-site -f tools/results-site/Dockerfile tools/results-site && docker run --rm -v "$(pwd):/workspace:ro" -v "$(pwd)/_site:/out" fb-results-site --repo-root /workspace --input /workspace/results/20260327152600/results.json --out /out
+docker build -t fb-results-site -f toolset/results-site/Dockerfile toolset/results-site && docker run --rm -v "$(pwd):/workspace:ro" -v "$(pwd)/_site:/out" fb-results-site --repo-root /workspace --input /workspace/results/20260327152600/results.json --out /out
 ```
 
 イメージが既に最新なら、`docker run` だけでも構いません。
