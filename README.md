@@ -128,6 +128,6 @@ Join in the conversation in the [Discussions tab](https://github.com/TechEmpower
 
 ```
 ./tfb --mode verify --test basolato asynchttpserver gin echo axum actix laravel django fastapi rails hono deno
-./tfb --mode benchmark --test basolato asynchttpserver gin echo axum actix laravel django fastapi rails hono deno
 ./tfb --mode benchmark --test echo laravel fastapi rails deno
+./tfb --mode benchmark --test basolato asynchttpserver gin echo axum actix laravel django fastapi rails hono deno
 ```
