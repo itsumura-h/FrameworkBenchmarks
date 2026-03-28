@@ -10,7 +10,7 @@ on:
       - main
     paths:
       - "results/**/results.json"
-      - "tools/results-site/**"
+      - "toolset/results-site/**"
       - ".github/workflows/results-pages.yml"
 
 permissions:
@@ -33,7 +33,7 @@ jobs:
           python-version: "3.14"
 
       - name: Generate static site
-        run: python tools/results-site/generate_site.py --repo-root "${GITHUB_WORKSPACE}" --out "${GITHUB_WORKSPACE}/_site"
+        run: python toolset/results-site/generate_site.py --repo-root "${GITHUB_WORKSPACE}" --out "${GITHUB_WORKSPACE}/_site"
 
       - uses: actions/upload-pages-artifact@v3
         with:
