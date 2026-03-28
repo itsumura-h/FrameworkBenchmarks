@@ -97,3 +97,37 @@ If you want to visualize them or compare different results files on bash, here i
 The community has consistently helped in making these tests better, and we welcome any and all changes. Reviewing our contribution practices and guidelines will help to keep us all on the same page. The [contribution guide](https://github.com/TechEmpower/FrameworkBenchmarks/wiki/Development-Contributing-Guide) can be found in the [TFB documentation](https://github.com/TechEmpower/FrameworkBenchmarks/wiki).
 
 Join in the conversation in the [Discussions tab](https://github.com/TechEmpower/FrameworkBenchmarks/discussions), on [Twitter](https://twitter.com/tfbenchmarks), or chat with us on [Freenode](https://webchat.freenode.net/) at `#techempower-fwbm`. 
+
+
+```
+./tfb --mode verify --test basolato
+./tfb --mode verify --test basolato --type cached-query
+./tfb --mode benchmark --test basolato --type cached-query
+./tfb --mode benchmark --test basolato 
+```
+
+- nim
+  - basolato
+  - asynchttpserver
+- go
+  - echo
+  - gin
+- rust
+  - axum
+  - actix
+- php
+  - laravel
+- python
+  - django
+  - fastapi
+- ruby
+  - rails
+- nodejs
+  - hono
+  - deno
+
+```
+./tfb --mode verify --test basolato asynchttpserver gin echo axum actix laravel django fastapi rails hono deno
+./tfb --mode benchmark --test basolato asynchttpserver gin echo axum actix laravel django fastapi rails hono deno
+./tfb --mode benchmark --test echo laravel fastapi rails deno
+```

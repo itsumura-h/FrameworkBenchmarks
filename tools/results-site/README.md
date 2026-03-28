@@ -15,6 +15,35 @@ python3 tools/results-site/generate_site.py --repo-root . --out ./_site
 python3 tools/results-site/generate_site.py --repo-root . --input results/20260327152600/results.json --out ./_site
 ```
 
+## Docker（ローカルで生成して手元で確認）
+
+リポジトリルートでイメージをビルドし、ルートを読み取り専用でマウント、出力はホストの `./_site` に書き込みます。
+
+```bash
+# リポジトリルートで実行
+docker build -t fb-results-site -f tools/results-site/Dockerfile tools/results-site
+
+docker run --rm \
+  -v "$(pwd):/workspace:ro" \
+  -v "$(pwd)/_site:/out" \
+  fb-results-site --repo-root /workspace --out /out
+```
+
+生成後、`./_site/index.html` をブラウザで開くか、次で簡易サーバを立てられます。
+
+```bash
+python3 -m http.server --directory _site 8765
+# http://127.0.0.1:8765/
+```
+
+特定の `results.json` を使う場合（同様にビルド＋実行を1行）:
+
+```bash
+docker build -t fb-results-site -f tools/results-site/Dockerfile tools/results-site && docker run --rm -v "$(pwd):/workspace:ro" -v "$(pwd)/_site:/out" fb-results-site --repo-root /workspace --input /workspace/results/20260327152600/results.json --out /out
+```
+
+イメージが既に最新なら、`docker run` だけでも構いません。
+
 ## GitHub Pages
 
 `.github/workflows/results-pages.yml` が `workflow_dispatch` および `results/**/results.json` 等の変更 push 時にサイトをビルドして Pages にデプロイします。

@@ -43,7 +43,6 @@ build/
 azure.err
 php-kohana/application/logs/
 php-fuel/fuel/app/logs/
-results/**/*.txt
 benchmark.cfg
 
 # Mac filesystem dust
@@ -67,7 +66,13 @@ benchmark.cfg
 # merge tooling
 *.orig
 
-# python
+# benchmark — under results/, track only results.json and test_metadata.json per folder
+results/**
+!results/**/
+!results/**/results.json
+!results/**/test_metadata.json
+
+# results site
 .venv/
 _site/
 frameworks/CSharp/akazawayun.pro/Dockerfile
