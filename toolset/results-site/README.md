@@ -19,8 +19,8 @@ python3 toolset/results-site/generate_site.py --repo-root . --input results/2026
 
 リポジトリルートでイメージをビルドし、ルートを読み取り専用でマウント、出力はホストの `./_site` に書き込みます。
 
-```bash
 # リポジトリルートで実行
+```bash
 docker build -t fb-results-site -f toolset/results-site/Dockerfile toolset/results-site
 
 docker run --rm \

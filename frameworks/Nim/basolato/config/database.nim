@@ -1,12 +1,9 @@
-import basolato/settings
-import db_connector/db_postgres
 import allographer/connection
 
-when defined(release):
-  import std/cpuinfo
 
 let maxConnections =
   when defined(release):
+    import std/cpuinfo
     (2000 div countProcessors()) - 2
   else:
     95
@@ -14,6 +11,7 @@ let maxConnections =
 let rdb* = dbopen(
   PostgreSQL, # SQLite3 or MySQL or MariaDB or PostgreSQL
   url="postgresql://benchmarkdbuser:benchmarkdbpass@tfb-database:5432/hello_world",
+  # url="postgresql://user:pass@postgreDb:5432/database",
   maxConnections=maxConnections,
   timeout=30,
   shouldDisplayLog=false,
