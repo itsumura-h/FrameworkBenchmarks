@@ -1,18 +1,18 @@
 {
-  "uuid": "edd6fc8e-4889-4d20-9500-26adcb213599",
-  "name": "(unspecified, datetime = 2026-03-27 17:25:28)",
-  "environmentDescription": "(unspecified, hostname = fc9a073446a1)",
+  "uuid": "9731d4ca-641b-4f1b-b2dc-516c4ed45c6a",
+  "name": "(unspecified, datetime = 2026-04-01 14:03:26)",
+  "environmentDescription": "(unspecified, hostname = 7c6159f5e9f4)",
   "git": {
-    "commitId": "72535da5f64677782b13a7adbf4f86a1c4935790",
+    "commitId": "4d9794dda3cdb2ce138a09c5de0d48f129996826",
     "repositoryUrl": "https://github.com/itsumura-h/FrameworkBenchmarks.git",
-    "branchName": "add-basolato"
+    "branchName": "run_20260331"
   },
   "operatingSystem": {
     "name": "Linux",
     "version": "6.8.0-101-generic"
   },
-  "startTime": 1774632328715,
-  "completionTime": 1774636383205,
+  "startTime": 1775052206239,
+  "completionTime": 1775061168438,
   "concurrencyLevels": [
     16,
     32,
@@ -42,1325 +42,2517 @@
     100
   ],
   "frameworks": [
+    "actix",
+    "axum",
+    "basolato",
     "deno",
+    "django",
     "echo",
     "fastapi",
+    "gin",
+    "hono",
+    "jester",
     "laravel",
     "rails"
   ],
   "duration": 15,
   "rawData": {
     "db": {
+      "basolato": [
+        {
+          "latencyAvg": "1.73ms",
+          "latencyStdev": "3.08ms",
+          "latencyMax": "90.23ms",
+          "totalRequests": 181040,
+          "startTime": 1775054103,
+          "endTime": 1775054118
+        },
+        {
+          "latencyAvg": "3.11ms",
+          "latencyStdev": "5.31ms",
+          "latencyMax": "163.44ms",
+          "totalRequests": 188702,
+          "startTime": 1775054120,
+          "endTime": 1775054135
+        },
+        {
+          "latencyAvg": "6.00ms",
+          "latencyStdev": "8.94ms",
+          "latencyMax": "230.38ms",
+          "totalRequests": 184199,
+          "startTime": 1775054137,
+          "endTime": 1775054152
+        },
+        {
+          "latencyAvg": "11.79ms",
+          "latencyStdev": "12.16ms",
+          "latencyMax": "292.45ms",
+          "totalRequests": 180336,
+          "startTime": 1775054154,
+          "endTime": 1775054169
+        },
+        {
+          "latencyAvg": "21.55ms",
+          "latencyStdev": "10.78ms",
+          "latencyMax": "307.03ms",
+          "totalRequests": 181716,
+          "startTime": 1775054171,
+          "endTime": 1775054187
+        },
+        {
+          "latencyAvg": "45.72ms",
+          "latencyStdev": "24.15ms",
+          "latencyMax": "763.72ms",
+          "totalRequests": 171938,
+          "startTime": 1775054189,
+          "endTime": 1775054204
+        }
+      ],
+      "django": [
+        {
+          "latencyAvg": "6.74ms",
+          "latencyStdev": "3.65ms",
+          "latencyMax": "42.77ms",
+          "totalRequests": 36872,
+          "startTime": 1775055162,
+          "endTime": 1775055177
+        },
+        {
+          "latencyAvg": "12.21ms",
+          "latencyStdev": "7.39ms",
+          "latencyMax": "92.72ms",
+          "totalRequests": 41244,
+          "startTime": 1775055179,
+          "endTime": 1775055194
+        },
+        {
+          "latencyAvg": "24.53ms",
+          "latencyStdev": "15.11ms",
+          "latencyMax": "148.21ms",
+          "totalRequests": 41157,
+          "startTime": 1775055196,
+          "endTime": 1775055211
+        },
+        {
+          "latencyAvg": "53.72ms",
+          "latencyStdev": "37.79ms",
+          "latencyMax": "339.20ms",
+          "totalRequests": 38712,
+          "startTime": 1775055213,
+          "endTime": 1775055228
+        },
+        {
+          "latencyAvg": "101.06ms",
+          "latencyStdev": "49.54ms",
+          "latencyMax": "321.01ms",
+          "totalRequests": 38582,
+          "startTime": 1775055230,
+          "endTime": 1775055245
+        },
+        {
+          "latencyAvg": "201.54ms",
+          "latencyStdev": "84.48ms",
+          "latencyMax": "566.96ms",
+          "totalRequests": 38066,
+          "startTime": 1775055247,
+          "endTime": 1775055262
+        }
+      ],
       "echo": [
         {
-          "latencyAvg": "0.86ms",
-          "latencyStdev": "795.57us",
-          "latencyMax": "27.56ms",
-          "totalRequests": 322364,
-          "startTime": 1774632723,
-          "endTime": 1774632738
+          "latencyAvg": "1.45ms",
+          "latencyStdev": "1.40ms",
+          "latencyMax": "30.30ms",
+          "totalRequests": 193758,
+          "startTime": 1775056000,
+          "endTime": 1775056015
         },
         {
-          "latencyAvg": "1.78ms",
-          "latencyStdev": "1.70ms",
-          "latencyMax": "28.40ms",
-          "totalRequests": 317670,
-          "startTime": 1774632740,
-          "endTime": 1774632755
+          "latencyAvg": "2.58ms",
+          "latencyStdev": "2.63ms",
+          "latencyMax": "48.73ms",
+          "totalRequests": 226707,
+          "startTime": 1775056017,
+          "endTime": 1775056032
         },
         {
-          "latencyAvg": "3.57ms",
-          "latencyStdev": "2.77ms",
-          "latencyMax": "44.55ms",
-          "totalRequests": 294569,
-          "startTime": 1774632757,
-          "endTime": 1774632772
+          "latencyAvg": "5.18ms",
+          "latencyStdev": "4.43ms",
+          "latencyMax": "66.50ms",
+          "totalRequests": 210543,
+          "startTime": 1775056034,
+          "endTime": 1775056050
         },
         {
-          "latencyAvg": "7.40ms",
-          "latencyStdev": "6.06ms",
-          "latencyMax": "82.40ms",
-          "totalRequests": 289660,
-          "startTime": 1774632774,
-          "endTime": 1774632789
+          "latencyAvg": "10.60ms",
+          "latencyStdev": "8.53ms",
+          "latencyMax": "110.13ms",
+          "totalRequests": 201187,
+          "startTime": 1775056052,
+          "endTime": 1775056067
         },
         {
-          "latencyAvg": "16.31ms",
-          "latencyStdev": "13.05ms",
-          "latencyMax": "149.39ms",
-          "totalRequests": 259567,
-          "startTime": 1774632791,
-          "endTime": 1774632807
+          "latencyAvg": "20.66ms",
+          "latencyStdev": "16.77ms",
+          "latencyMax": "234.22ms",
+          "totalRequests": 205765,
+          "startTime": 1775056069,
+          "endTime": 1775056084
         },
         {
-          "latencyAvg": "29.55ms",
-          "latencyStdev": "15.40ms",
-          "latencyMax": "154.90ms",
-          "totalRequests": 265486,
-          "startTime": 1774632809,
-          "endTime": 1774632824
+          "latencyAvg": "39.09ms",
+          "latencyStdev": "21.41ms",
+          "latencyMax": "214.70ms",
+          "totalRequests": 201712,
+          "startTime": 1775056086,
+          "endTime": 1775056101
         }
       ],
       "fastapi": [
         {
-          "latencyAvg": "2.42ms",
-          "latencyStdev": "1.35ms",
-          "latencyMax": "21.43ms",
-          "totalRequests": 102824,
-          "startTime": 1774633566,
-          "endTime": 1774633582
+          "latencyAvg": "3.38ms",
+          "latencyStdev": "2.78ms",
+          "latencyMax": "42.74ms",
+          "totalRequests": 79447,
+          "startTime": 1775056852,
+          "endTime": 1775056867
         },
         {
-          "latencyAvg": "4.45ms",
-          "latencyStdev": "2.51ms",
-          "latencyMax": "41.18ms",
-          "totalRequests": 111700,
-          "startTime": 1774633584,
-          "endTime": 1774633599
+          "latencyAvg": "5.76ms",
+          "latencyStdev": "4.03ms",
+          "latencyMax": "49.05ms",
+          "totalRequests": 89241,
+          "startTime": 1775056869,
+          "endTime": 1775056884
         },
         {
-          "latencyAvg": "7.56ms",
-          "latencyStdev": "4.12ms",
-          "latencyMax": "71.28ms",
-          "totalRequests": 130633,
-          "startTime": 1774633601,
-          "endTime": 1774633616
+          "latencyAvg": "10.70ms",
+          "latencyStdev": "6.49ms",
+          "latencyMax": "74.54ms",
+          "totalRequests": 94345,
+          "startTime": 1775056886,
+          "endTime": 1775056901
         },
         {
-          "latencyAvg": "16.89ms",
-          "latencyStdev": "9.21ms",
-          "latencyMax": "108.28ms",
-          "totalRequests": 117005,
-          "startTime": 1774633618,
-          "endTime": 1774633633
+          "latencyAvg": "21.24ms",
+          "latencyStdev": "10.15ms",
+          "latencyMax": "100.02ms",
+          "totalRequests": 92301,
+          "startTime": 1775056903,
+          "endTime": 1775056918
         },
         {
-          "latencyAvg": "31.85ms",
-          "latencyStdev": "17.32ms",
-          "latencyMax": "320.73ms",
-          "totalRequests": 124497,
-          "startTime": 1774633635,
-          "endTime": 1774633650
+          "latencyAvg": "41.99ms",
+          "latencyStdev": "18.17ms",
+          "latencyMax": "189.55ms",
+          "totalRequests": 92744,
+          "startTime": 1775056920,
+          "endTime": 1775056935
         },
         {
-          "latencyAvg": "110.36ms",
-          "latencyStdev": "279.03ms",
-          "latencyMax": "3.03s",
-          "totalRequests": 114121,
-          "startTime": 1774633652,
-          "endTime": 1774633667
+          "latencyAvg": "83.87ms",
+          "latencyStdev": "32.58ms",
+          "latencyMax": "408.17ms",
+          "totalRequests": 92126,
+          "startTime": 1775056937,
+          "endTime": 1775056953
+        }
+      ],
+      "gin": [
+        {
+          "latencyAvg": "1.64ms",
+          "latencyStdev": "1.39ms",
+          "latencyMax": "30.36ms",
+          "totalRequests": 165373,
+          "startTime": 1775057712,
+          "endTime": 1775057727
+        },
+        {
+          "latencyAvg": "2.58ms",
+          "latencyStdev": "2.20ms",
+          "latencyMax": "38.21ms",
+          "totalRequests": 210386,
+          "startTime": 1775057729,
+          "endTime": 1775057744
+        },
+        {
+          "latencyAvg": "5.14ms",
+          "latencyStdev": "4.37ms",
+          "latencyMax": "84.44ms",
+          "totalRequests": 211542,
+          "startTime": 1775057746,
+          "endTime": 1775057761
+        },
+        {
+          "latencyAvg": "10.64ms",
+          "latencyStdev": "9.42ms",
+          "latencyMax": "101.00ms",
+          "totalRequests": 209153,
+          "startTime": 1775057763,
+          "endTime": 1775057778
+        },
+        {
+          "latencyAvg": "23.13ms",
+          "latencyStdev": "20.96ms",
+          "latencyMax": "222.26ms",
+          "totalRequests": 194876,
+          "startTime": 1775057780,
+          "endTime": 1775057795
+        },
+        {
+          "latencyAvg": "43.49ms",
+          "latencyStdev": "34.21ms",
+          "latencyMax": "407.02ms",
+          "totalRequests": 194237,
+          "startTime": 1775057797,
+          "endTime": 1775057812
         }
       ],
       "laravel": [
         {
-          "latencyAvg": "11.13ms",
-          "latencyStdev": "4.98ms",
-          "latencyMax": "63.11ms",
-          "totalRequests": 21906,
-          "startTime": 1774634533,
-          "endTime": 1774634548
+          "latencyAvg": "14.34ms",
+          "latencyStdev": "6.41ms",
+          "latencyMax": "80.34ms",
+          "totalRequests": 16987,
+          "startTime": 1775059301,
+          "endTime": 1775059316
         },
         {
-          "latencyAvg": "21.66ms",
-          "latencyStdev": "9.65ms",
-          "latencyMax": "116.26ms",
-          "totalRequests": 22456,
-          "startTime": 1774634550,
-          "endTime": 1774634565
+          "latencyAvg": "28.72ms",
+          "latencyStdev": "12.12ms",
+          "latencyMax": "155.18ms",
+          "totalRequests": 16903,
+          "startTime": 1775059318,
+          "endTime": 1775059334
         },
         {
-          "latencyAvg": "42.47ms",
-          "latencyStdev": "16.74ms",
-          "latencyMax": "166.57ms",
-          "totalRequests": 22710,
-          "startTime": 1774634567,
-          "endTime": 1774634582
+          "latencyAvg": "53.40ms",
+          "latencyStdev": "21.18ms",
+          "latencyMax": "355.87ms",
+          "totalRequests": 18096,
+          "startTime": 1775059336,
+          "endTime": 1775059351
         },
         {
-          "latencyAvg": "76.86ms",
-          "latencyStdev": "30.90ms",
-          "latencyMax": "275.79ms",
-          "totalRequests": 25020,
-          "startTime": 1774634584,
-          "endTime": 1774634599
+          "latencyAvg": "108.66ms",
+          "latencyStdev": "45.98ms",
+          "latencyMax": "560.27ms",
+          "totalRequests": 17758,
+          "startTime": 1775059353,
+          "endTime": 1775059368
         },
         {
-          "latencyAvg": "169.15ms",
-          "latencyStdev": "109.46ms",
-          "latencyMax": "632.03ms",
-          "totalRequests": 23890,
-          "startTime": 1774634601,
-          "endTime": 1774634616
+          "latencyAvg": "230.48ms",
+          "latencyStdev": "109.40ms",
+          "latencyMax": "745.01ms",
+          "totalRequests": 16718,
+          "startTime": 1775059370,
+          "endTime": 1775059385
         },
         {
-          "latencyAvg": "348.05ms",
-          "latencyStdev": "201.61ms",
-          "latencyMax": "1.33s",
-          "totalRequests": 22738,
-          "startTime": 1774634618,
-          "endTime": 1774634633
+          "latencyAvg": "444.16ms",
+          "latencyStdev": "191.28ms",
+          "latencyMax": "1.41s",
+          "totalRequests": 17149,
+          "startTime": 1775059387,
+          "endTime": 1775059402
         }
       ],
       "rails": [
         {
-          "latencyAvg": "2.97ms",
-          "latencyStdev": "2.26ms",
-          "latencyMax": "28.00ms",
-          "totalRequests": 88853,
-          "startTime": 1774635555,
-          "endTime": 1774635570
+          "latencyAvg": "4.16ms",
+          "latencyStdev": "3.43ms",
+          "latencyMax": "50.60ms",
+          "totalRequests": 64882,
+          "startTime": 1775060334,
+          "endTime": 1775060349
         },
         {
-          "latencyAvg": "5.93ms",
-          "latencyStdev": "4.29ms",
-          "latencyMax": "71.53ms",
-          "totalRequests": 87710,
-          "startTime": 1774635572,
-          "endTime": 1774635587
+          "latencyAvg": "7.42ms",
+          "latencyStdev": "5.45ms",
+          "latencyMax": "66.80ms",
+          "totalRequests": 70502,
+          "startTime": 1775060351,
+          "endTime": 1775060367
         },
         {
-          "latencyAvg": "12.16ms",
-          "latencyStdev": "9.39ms",
-          "latencyMax": "111.79ms",
-          "totalRequests": 87436,
-          "startTime": 1774635589,
-          "endTime": 1774635604
+          "latencyAvg": "13.58ms",
+          "latencyStdev": "9.55ms",
+          "latencyMax": "89.88ms",
+          "totalRequests": 75956,
+          "startTime": 1775060369,
+          "endTime": 1775060384
         },
         {
-          "latencyAvg": "22.55ms",
-          "latencyStdev": "13.27ms",
-          "latencyMax": "128.12ms",
-          "totalRequests": 88947,
-          "startTime": 1774635606,
-          "endTime": 1774635621
+          "latencyAvg": "26.07ms",
+          "latencyStdev": "20.64ms",
+          "latencyMax": "206.19ms",
+          "totalRequests": 82890,
+          "startTime": 1775060386,
+          "endTime": 1775060401
         },
         {
-          "latencyAvg": "40.27ms",
-          "latencyStdev": "20.49ms",
-          "latencyMax": "163.94ms",
-          "totalRequests": 97069,
-          "startTime": 1774635623,
-          "endTime": 1774635638
+          "latencyAvg": "52.20ms",
+          "latencyStdev": "28.65ms",
+          "latencyMax": "264.00ms",
+          "totalRequests": 75684,
+          "startTime": 1775060403,
+          "endTime": 1775060418
         },
         {
-          "latencyAvg": "79.83ms",
-          "latencyStdev": "32.63ms",
-          "latencyMax": "300.61ms",
-          "totalRequests": 96714,
-          "startTime": 1774635640,
-          "endTime": 1774635655
+          "latencyAvg": "118.49ms",
+          "latencyStdev": "100.12ms",
+          "latencyMax": "1.08s",
+          "totalRequests": 73058,
+          "startTime": 1775060420,
+          "endTime": 1775060435
         }
       ]
     },
     "fortune": {
+      "basolato": [
+        {
+          "latencyAvg": "1.71ms",
+          "latencyStdev": "3.18ms",
+          "latencyMax": "102.96ms",
+          "totalRequests": 169474,
+          "startTime": 1775054441,
+          "endTime": 1775054456
+        },
+        {
+          "latencyAvg": "3.33ms",
+          "latencyStdev": "7.83ms",
+          "latencyMax": "267.43ms",
+          "totalRequests": 178756,
+          "startTime": 1775054458,
+          "endTime": 1775054473
+        },
+        {
+          "latencyAvg": "6.15ms",
+          "latencyStdev": "7.11ms",
+          "latencyMax": "208.00ms",
+          "totalRequests": 182798,
+          "startTime": 1775054475,
+          "endTime": 1775054491
+        },
+        {
+          "latencyAvg": "10.72ms",
+          "latencyStdev": "8.22ms",
+          "latencyMax": "208.31ms",
+          "totalRequests": 191542,
+          "startTime": 1775054493,
+          "endTime": 1775054508
+        },
+        {
+          "latencyAvg": "21.38ms",
+          "latencyStdev": "11.06ms",
+          "latencyMax": "149.26ms",
+          "totalRequests": 185105,
+          "startTime": 1775054510,
+          "endTime": 1775054525
+        },
+        {
+          "latencyAvg": "43.81ms",
+          "latencyStdev": "20.95ms",
+          "latencyMax": "325.52ms",
+          "totalRequests": 178670,
+          "startTime": 1775054527,
+          "endTime": 1775054542
+        }
+      ],
+      "django": [
+        {
+          "latencyAvg": "11.62ms",
+          "latencyStdev": "18.81ms",
+          "latencyMax": "264.89ms",
+          "totalRequests": 27039,
+          "startTime": 1775055662,
+          "endTime": 1775055678
+        },
+        {
+          "latencyAvg": "17.18ms",
+          "latencyStdev": "19.72ms",
+          "latencyMax": "275.55ms",
+          "totalRequests": 33599,
+          "startTime": 1775055680,
+          "endTime": 1775055695
+        },
+        {
+          "latencyAvg": "31.13ms",
+          "latencyStdev": "34.92ms",
+          "latencyMax": "540.91ms",
+          "totalRequests": 36293,
+          "startTime": 1775055697,
+          "endTime": 1775055712
+        },
+        {
+          "latencyAvg": "59.71ms",
+          "latencyStdev": "54.77ms",
+          "latencyMax": "683.30ms",
+          "totalRequests": 36484,
+          "startTime": 1775055714,
+          "endTime": 1775055729
+        },
+        {
+          "latencyAvg": "109.29ms",
+          "latencyStdev": "57.05ms",
+          "latencyMax": "553.22ms",
+          "totalRequests": 35864,
+          "startTime": 1775055731,
+          "endTime": 1775055746
+        },
+        {
+          "latencyAvg": "230.22ms",
+          "latencyStdev": "92.50ms",
+          "latencyMax": "605.01ms",
+          "totalRequests": 33269,
+          "startTime": 1775055748,
+          "endTime": 1775055763
+        }
+      ],
       "echo": [
         {
-          "latencyAvg": "1.56ms",
-          "latencyStdev": "1.54ms",
-          "latencyMax": "35.24ms",
-          "totalRequests": 182721,
-          "startTime": 1774633223,
-          "endTime": 1774633238
+          "latencyAvg": "2.07ms",
+          "latencyStdev": "2.39ms",
+          "latencyMax": "71.17ms",
+          "totalRequests": 147588,
+          "startTime": 1775056500,
+          "endTime": 1775056515
         },
         {
-          "latencyAvg": "2.90ms",
-          "latencyStdev": "2.46ms",
-          "latencyMax": "37.89ms",
-          "totalRequests": 188111,
-          "startTime": 1774633240,
-          "endTime": 1774633255
+          "latencyAvg": "4.04ms",
+          "latencyStdev": "3.75ms",
+          "latencyMax": "70.90ms",
+          "totalRequests": 138501,
+          "startTime": 1775056517,
+          "endTime": 1775056532
         },
         {
-          "latencyAvg": "6.01ms",
-          "latencyStdev": "4.92ms",
-          "latencyMax": "63.92ms",
-          "totalRequests": 179240,
-          "startTime": 1774633257,
-          "endTime": 1774633272
+          "latencyAvg": "7.84ms",
+          "latencyStdev": "6.87ms",
+          "latencyMax": "95.23ms",
+          "totalRequests": 140923,
+          "startTime": 1775056534,
+          "endTime": 1775056550
         },
         {
-          "latencyAvg": "12.11ms",
-          "latencyStdev": "10.30ms",
-          "latencyMax": "97.00ms",
-          "totalRequests": 180688,
-          "startTime": 1774633274,
-          "endTime": 1774633289
+          "latencyAvg": "16.11ms",
+          "latencyStdev": "13.79ms",
+          "latencyMax": "141.32ms",
+          "totalRequests": 135800,
+          "startTime": 1775056552,
+          "endTime": 1775056567
         },
         {
-          "latencyAvg": "26.76ms",
-          "latencyStdev": "25.96ms",
-          "latencyMax": "315.50ms",
-          "totalRequests": 171847,
-          "startTime": 1774633291,
-          "endTime": 1774633306
+          "latencyAvg": "33.83ms",
+          "latencyStdev": "31.72ms",
+          "latencyMax": "359.47ms",
+          "totalRequests": 135024,
+          "startTime": 1775056569,
+          "endTime": 1775056584
         },
         {
-          "latencyAvg": "54.80ms",
-          "latencyStdev": "54.10ms",
-          "latencyMax": "530.52ms",
-          "totalRequests": 173343,
-          "startTime": 1774633308,
-          "endTime": 1774633323
+          "latencyAvg": "71.57ms",
+          "latencyStdev": "79.15ms",
+          "latencyMax": "792.92ms",
+          "totalRequests": 142343,
+          "startTime": 1775056586,
+          "endTime": 1775056601
         }
       ],
       "fastapi": [
         {
-          "latencyAvg": "2.60ms",
-          "latencyStdev": "1.36ms",
-          "latencyMax": "29.08ms",
-          "totalRequests": 95379,
-          "startTime": 1774634066,
-          "endTime": 1774634081
+          "latencyAvg": "3.99ms",
+          "latencyStdev": "2.92ms",
+          "latencyMax": "42.19ms",
+          "totalRequests": 65170,
+          "startTime": 1775057352,
+          "endTime": 1775057367
         },
         {
-          "latencyAvg": "4.78ms",
-          "latencyStdev": "3.19ms",
-          "latencyMax": "130.94ms",
-          "totalRequests": 104814,
-          "startTime": 1774634083,
-          "endTime": 1774634098
+          "latencyAvg": "7.16ms",
+          "latencyStdev": "4.52ms",
+          "latencyMax": "55.14ms",
+          "totalRequests": 71297,
+          "startTime": 1775057369,
+          "endTime": 1775057385
         },
         {
-          "latencyAvg": "9.67ms",
-          "latencyStdev": "4.84ms",
-          "latencyMax": "74.75ms",
-          "totalRequests": 101001,
-          "startTime": 1774634100,
-          "endTime": 1774634115
+          "latencyAvg": "13.28ms",
+          "latencyStdev": "7.50ms",
+          "latencyMax": "89.99ms",
+          "totalRequests": 75576,
+          "startTime": 1775057387,
+          "endTime": 1775057402
         },
         {
-          "latencyAvg": "19.31ms",
-          "latencyStdev": "8.34ms",
-          "latencyMax": "134.51ms",
-          "totalRequests": 100286,
-          "startTime": 1774634117,
-          "endTime": 1774634132
+          "latencyAvg": "26.47ms",
+          "latencyStdev": "14.29ms",
+          "latencyMax": "140.68ms",
+          "totalRequests": 75107,
+          "startTime": 1775057404,
+          "endTime": 1775057419
         },
         {
-          "latencyAvg": "40.03ms",
-          "latencyStdev": "17.53ms",
-          "latencyMax": "172.87ms",
-          "totalRequests": 96385,
-          "startTime": 1774634134,
-          "endTime": 1774634149
+          "latencyAvg": "50.42ms",
+          "latencyStdev": "21.38ms",
+          "latencyMax": "200.92ms",
+          "totalRequests": 77096,
+          "startTime": 1775057421,
+          "endTime": 1775057436
         },
         {
-          "latencyAvg": "77.64ms",
-          "latencyStdev": "33.51ms",
-          "latencyMax": "812.55ms",
-          "totalRequests": 100777,
-          "startTime": 1774634151,
-          "endTime": 1774634167
+          "latencyAvg": "98.06ms",
+          "latencyStdev": "36.96ms",
+          "latencyMax": "440.48ms",
+          "totalRequests": 78840,
+          "startTime": 1775057438,
+          "endTime": 1775057453
+        }
+      ],
+      "gin": [
+        {
+          "latencyAvg": "1.99ms",
+          "latencyStdev": "1.63ms",
+          "latencyMax": "25.03ms",
+          "totalRequests": 135180,
+          "startTime": 1775058212,
+          "endTime": 1775058227
+        },
+        {
+          "latencyAvg": "3.95ms",
+          "latencyStdev": "3.33ms",
+          "latencyMax": "51.07ms",
+          "totalRequests": 137165,
+          "startTime": 1775058229,
+          "endTime": 1775058244
+        },
+        {
+          "latencyAvg": "7.88ms",
+          "latencyStdev": "6.98ms",
+          "latencyMax": "94.15ms",
+          "totalRequests": 141777,
+          "startTime": 1775058246,
+          "endTime": 1775058261
+        },
+        {
+          "latencyAvg": "18.15ms",
+          "latencyStdev": "18.91ms",
+          "latencyMax": "253.77ms",
+          "totalRequests": 136536,
+          "startTime": 1775058263,
+          "endTime": 1775058278
+        },
+        {
+          "latencyAvg": "39.60ms",
+          "latencyStdev": "43.60ms",
+          "latencyMax": "425.60ms",
+          "totalRequests": 134329,
+          "startTime": 1775058280,
+          "endTime": 1775058295
+        },
+        {
+          "latencyAvg": "74.40ms",
+          "latencyStdev": "73.56ms",
+          "latencyMax": "816.24ms",
+          "totalRequests": 129009,
+          "startTime": 1775058297,
+          "endTime": 1775058312
         }
       ],
       "laravel": [
         {
-          "latencyAvg": "11.39ms",
-          "latencyStdev": "4.76ms",
-          "latencyMax": "69.06ms",
-          "totalRequests": 21283,
-          "startTime": 1774635033,
-          "endTime": 1774635048
+          "latencyAvg": "16.69ms",
+          "latencyStdev": "7.71ms",
+          "latencyMax": "94.05ms",
+          "totalRequests": 14641,
+          "startTime": 1775059802,
+          "endTime": 1775059817
         },
         {
-          "latencyAvg": "21.51ms",
-          "latencyStdev": "7.69ms",
-          "latencyMax": "81.00ms",
-          "totalRequests": 22392,
-          "startTime": 1774635050,
-          "endTime": 1774635065
+          "latencyAvg": "31.99ms",
+          "latencyStdev": "13.96ms",
+          "latencyMax": "152.42ms",
+          "totalRequests": 15200,
+          "startTime": 1775059819,
+          "endTime": 1775059834
         },
         {
-          "latencyAvg": "43.77ms",
-          "latencyStdev": "17.38ms",
-          "latencyMax": "162.26ms",
-          "totalRequests": 22070,
-          "startTime": 1774635067,
-          "endTime": 1774635082
+          "latencyAvg": "57.76ms",
+          "latencyStdev": "21.41ms",
+          "latencyMax": "188.01ms",
+          "totalRequests": 16689,
+          "startTime": 1775059836,
+          "endTime": 1775059851
         },
         {
-          "latencyAvg": "78.26ms",
-          "latencyStdev": "31.59ms",
-          "latencyMax": "222.93ms",
-          "totalRequests": 24551,
-          "startTime": 1774635084,
-          "endTime": 1774635099
+          "latencyAvg": "112.49ms",
+          "latencyStdev": "43.74ms",
+          "latencyMax": "363.26ms",
+          "totalRequests": 17066,
+          "startTime": 1775059853,
+          "endTime": 1775059868
         },
         {
-          "latencyAvg": "173.46ms",
-          "latencyStdev": "80.97ms",
-          "latencyMax": "558.33ms",
-          "totalRequests": 22108,
-          "startTime": 1774635101,
-          "endTime": 1774635116
+          "latencyAvg": "251.17ms",
+          "latencyStdev": "157.94ms",
+          "latencyMax": "1.01s",
+          "totalRequests": 16017,
+          "startTime": 1775059870,
+          "endTime": 1775059885
         },
         {
-          "latencyAvg": "364.44ms",
-          "latencyStdev": "169.94ms",
-          "latencyMax": "1.13s",
-          "totalRequests": 20810,
-          "startTime": 1774635118,
-          "endTime": 1774635133
+          "latencyAvg": "513.59ms",
+          "latencyStdev": "369.25ms",
+          "latencyMax": "2.38s",
+          "totalRequests": 16039,
+          "startTime": 1775059887,
+          "endTime": 1775059903
         }
       ],
       "rails": [
         {
-          "latencyAvg": "4.03ms",
-          "latencyStdev": "3.40ms",
-          "latencyMax": "50.25ms",
-          "totalRequests": 67174,
-          "startTime": 1774636054,
-          "endTime": 1774636069
+          "latencyAvg": "5.56ms",
+          "latencyStdev": "4.49ms",
+          "latencyMax": "62.83ms",
+          "totalRequests": 48196,
+          "startTime": 1775060834,
+          "endTime": 1775060849
         },
         {
-          "latencyAvg": "7.41ms",
-          "latencyStdev": "5.46ms",
-          "latencyMax": "65.84ms",
-          "totalRequests": 70719,
-          "startTime": 1774636071,
-          "endTime": 1774636086
+          "latencyAvg": "10.48ms",
+          "latencyStdev": "8.34ms",
+          "latencyMax": "119.82ms",
+          "totalRequests": 51041,
+          "startTime": 1775060851,
+          "endTime": 1775060866
         },
         {
-          "latencyAvg": "14.37ms",
-          "latencyStdev": "9.92ms",
-          "latencyMax": "102.32ms",
-          "totalRequests": 71777,
-          "startTime": 1774636088,
-          "endTime": 1774636103
+          "latencyAvg": "18.34ms",
+          "latencyStdev": "13.45ms",
+          "latencyMax": "124.05ms",
+          "totalRequests": 57094,
+          "startTime": 1775060868,
+          "endTime": 1775060883
         },
         {
-          "latencyAvg": "29.17ms",
-          "latencyStdev": "17.40ms",
-          "latencyMax": "193.35ms",
-          "totalRequests": 68978,
-          "startTime": 1774636105,
-          "endTime": 1774636120
+          "latencyAvg": "38.81ms",
+          "latencyStdev": "30.66ms",
+          "latencyMax": "237.26ms",
+          "totalRequests": 55430,
+          "startTime": 1775060885,
+          "endTime": 1775060900
         },
         {
-          "latencyAvg": "54.89ms",
-          "latencyStdev": "32.39ms",
-          "latencyMax": "236.01ms",
-          "totalRequests": 72264,
-          "startTime": 1774636122,
-          "endTime": 1774636137
+          "latencyAvg": "66.89ms",
+          "latencyStdev": "37.02ms",
+          "latencyMax": "363.17ms",
+          "totalRequests": 58918,
+          "startTime": 1775060902,
+          "endTime": 1775060917
         },
         {
-          "latencyAvg": "112.32ms",
-          "latencyStdev": "64.63ms",
-          "latencyMax": "574.72ms",
-          "totalRequests": 70533,
-          "startTime": 1774636139,
-          "endTime": 1774636154
+          "latencyAvg": "145.35ms",
+          "latencyStdev": "64.43ms",
+          "latencyMax": "767.62ms",
+          "totalRequests": 53081,
+          "startTime": 1775060919,
+          "endTime": 1775060935
         }
       ]
     },
     "query": {
+      "basolato": [
+        {
+          "latencyAvg": "326.08ms",
+          "latencyStdev": "908.80ms",
+          "latencyMax": "7.97s",
+          "totalRequests": 66175,
+          "connect": 0,
+          "read": 0,
+          "write": 0,
+          "timeout": 45,
+          "startTime": 1775054370,
+          "endTime": 1775054385
+        },
+        {
+          "latencyAvg": "451.74ms",
+          "latencyStdev": "300.48ms",
+          "latencyMax": "3.46s",
+          "totalRequests": 18224,
+          "startTime": 1775054387,
+          "endTime": 1775054402
+        },
+        {
+          "startTime": 1775054404,
+          "endTime": 1775054404
+        },
+        {
+          "startTime": 1775054406,
+          "endTime": 1775054406
+        },
+        {
+          "startTime": 1775054408,
+          "endTime": 1775054408
+        }
+      ],
+      "django": [
+        {
+          "latencyAvg": "208.39ms",
+          "latencyStdev": "79.28ms",
+          "latencyMax": "511.65ms",
+          "totalRequests": 36792,
+          "startTime": 1775055429,
+          "endTime": 1775055444
+        },
+        {
+          "latencyAvg": "540.96ms",
+          "latencyStdev": "243.31ms",
+          "latencyMax": "1.30s",
+          "totalRequests": 13941,
+          "startTime": 1775055446,
+          "endTime": 1775055461
+        },
+        {
+          "latencyAvg": "857.47ms",
+          "latencyStdev": "260.96ms",
+          "latencyMax": "1.59s",
+          "totalRequests": 8653,
+          "startTime": 1775055463,
+          "endTime": 1775055478
+        },
+        {
+          "latencyAvg": "1.19s",
+          "latencyStdev": "493.04ms",
+          "latencyMax": "2.86s",
+          "totalRequests": 6152,
+          "startTime": 1775055480,
+          "endTime": 1775055495
+        },
+        {
+          "latencyAvg": "1.57s",
+          "latencyStdev": "769.74ms",
+          "latencyMax": "4.29s",
+          "totalRequests": 4592,
+          "startTime": 1775055497,
+          "endTime": 1775055512
+        }
+      ],
       "echo": [
         {
-          "latencyAvg": "32.26ms",
-          "latencyStdev": "20.63ms",
-          "latencyMax": "392.54ms",
-          "totalRequests": 250142,
-          "startTime": 1774632990,
-          "endTime": 1774633005
+          "latencyAvg": "41.80ms",
+          "latencyStdev": "24.10ms",
+          "latencyMax": "254.30ms",
+          "totalRequests": 190307,
+          "startTime": 1775056267,
+          "endTime": 1775056282
         },
         {
-          "latencyAvg": "106.67ms",
-          "latencyStdev": "24.27ms",
-          "latencyMax": "234.07ms",
-          "totalRequests": 71830,
-          "startTime": 1774633007,
-          "endTime": 1774633022
+          "latencyAvg": "136.52ms",
+          "latencyStdev": "37.07ms",
+          "latencyMax": "419.48ms",
+          "totalRequests": 56154,
+          "startTime": 1775056284,
+          "endTime": 1775056299
         },
         {
-          "latencyAvg": "201.43ms",
-          "latencyStdev": "31.54ms",
-          "latencyMax": "389.49ms",
-          "totalRequests": 37901,
-          "startTime": 1774633024,
-          "endTime": 1774633039
+          "latencyAvg": "246.58ms",
+          "latencyStdev": "45.90ms",
+          "latencyMax": "531.10ms",
+          "totalRequests": 30974,
+          "startTime": 1775056301,
+          "endTime": 1775056317
         },
         {
-          "latencyAvg": "284.78ms",
-          "latencyStdev": "47.65ms",
-          "latencyMax": "596.83ms",
-          "totalRequests": 26747,
-          "startTime": 1774633041,
-          "endTime": 1774633056
+          "latencyAvg": "367.38ms",
+          "latencyStdev": "57.86ms",
+          "latencyMax": "776.69ms",
+          "totalRequests": 20679,
+          "startTime": 1775056319,
+          "endTime": 1775056334
         },
         {
-          "latencyAvg": "377.74ms",
-          "latencyStdev": "47.82ms",
-          "latencyMax": "656.36ms",
-          "totalRequests": 20129,
-          "startTime": 1774633058,
-          "endTime": 1774633073
+          "latencyAvg": "450.44ms",
+          "latencyStdev": "72.16ms",
+          "latencyMax": "904.62ms",
+          "totalRequests": 16842,
+          "startTime": 1775056336,
+          "endTime": 1775056351
         }
       ],
       "fastapi": [
         {
-          "latencyAvg": "98.70ms",
-          "latencyStdev": "33.80ms",
-          "latencyMax": "867.72ms",
-          "totalRequests": 78289,
-          "startTime": 1774633833,
-          "endTime": 1774633848
+          "latencyAvg": "129.98ms",
+          "latencyStdev": "61.28ms",
+          "latencyMax": "1.15s",
+          "totalRequests": 60147,
+          "startTime": 1775057119,
+          "endTime": 1775057134
         },
         {
-          "latencyAvg": "177.06ms",
-          "latencyStdev": "48.98ms",
-          "latencyMax": "590.61ms",
-          "totalRequests": 43220,
-          "startTime": 1774633850,
-          "endTime": 1774633865
+          "latencyAvg": "260.80ms",
+          "latencyStdev": "147.23ms",
+          "latencyMax": "2.20s",
+          "totalRequests": 30638,
+          "startTime": 1775057136,
+          "endTime": 1775057151
         },
         {
-          "latencyAvg": "326.89ms",
-          "latencyStdev": "360.02ms",
-          "latencyMax": "3.95s",
-          "totalRequests": 27579,
-          "startTime": 1774633867,
-          "endTime": 1774633882
+          "latencyAvg": "395.72ms",
+          "latencyStdev": "248.66ms",
+          "latencyMax": "2.93s",
+          "totalRequests": 20354,
+          "startTime": 1775057153,
+          "endTime": 1775057168
         },
         {
-          "latencyAvg": "477.14ms",
-          "latencyStdev": "635.75ms",
-          "latencyMax": "5.47s",
-          "totalRequests": 21561,
-          "startTime": 1774633884,
-          "endTime": 1774633900
+          "latencyAvg": "530.63ms",
+          "latencyStdev": "241.11ms",
+          "latencyMax": "2.95s",
+          "totalRequests": 14723,
+          "startTime": 1775057170,
+          "endTime": 1775057186
         },
         {
-          "latencyAvg": "439.73ms",
-          "latencyStdev": "100.37ms",
-          "latencyMax": "1.05s",
-          "totalRequests": 17251,
-          "startTime": 1774633902,
-          "endTime": 1774633917
+          "latencyAvg": "609.50ms",
+          "latencyStdev": "159.04ms",
+          "latencyMax": "1.96s",
+          "totalRequests": 12385,
+          "startTime": 1775057188,
+          "endTime": 1775057203
+        }
+      ],
+      "gin": [
+        {
+          "latencyAvg": "45.51ms",
+          "latencyStdev": "36.77ms",
+          "latencyMax": "443.84ms",
+          "totalRequests": 187545,
+          "startTime": 1775057979,
+          "endTime": 1775057994
+        },
+        {
+          "latencyAvg": "127.76ms",
+          "latencyStdev": "55.00ms",
+          "latencyMax": "576.12ms",
+          "totalRequests": 60496,
+          "startTime": 1775057996,
+          "endTime": 1775058011
+        },
+        {
+          "latencyAvg": "233.28ms",
+          "latencyStdev": "68.27ms",
+          "latencyMax": "702.03ms",
+          "totalRequests": 32706,
+          "startTime": 1775058013,
+          "endTime": 1775058028
+        },
+        {
+          "latencyAvg": "327.40ms",
+          "latencyStdev": "91.35ms",
+          "latencyMax": "880.47ms",
+          "totalRequests": 23250,
+          "startTime": 1775058030,
+          "endTime": 1775058045
+        },
+        {
+          "latencyAvg": "412.34ms",
+          "latencyStdev": "99.74ms",
+          "latencyMax": "1.08s",
+          "totalRequests": 18422,
+          "startTime": 1775058047,
+          "endTime": 1775058063
         }
       ],
       "laravel": [
         {
-          "latencyAvg": "372.33ms",
-          "latencyStdev": "279.70ms",
-          "latencyMax": "1.61s",
-          "totalRequests": 22419,
-          "startTime": 1774634800,
-          "endTime": 1774634815
+          "latencyAvg": "403.42ms",
+          "latencyStdev": "165.58ms",
+          "latencyMax": "1.67s",
+          "totalRequests": 18854,
+          "startTime": 1775059568,
+          "endTime": 1775059584
         },
         {
-          "latencyAvg": "524.01ms",
-          "latencyStdev": "268.85ms",
-          "latencyMax": "1.73s",
-          "totalRequests": 14642,
-          "startTime": 1774634817,
-          "endTime": 1774634832
+          "latencyAvg": "696.65ms",
+          "latencyStdev": "373.28ms",
+          "latencyMax": "2.41s",
+          "totalRequests": 10819,
+          "startTime": 1775059586,
+          "endTime": 1775059601
         },
         {
-          "latencyAvg": "784.15ms",
-          "latencyStdev": "291.86ms",
-          "latencyMax": "2.12s",
-          "totalRequests": 9541,
-          "startTime": 1774634834,
-          "endTime": 1774634849
+          "latencyAvg": "992.81ms",
+          "latencyStdev": "442.40ms",
+          "latencyMax": "3.05s",
+          "totalRequests": 7495,
+          "startTime": 1775059603,
+          "endTime": 1775059618
         },
         {
-          "latencyAvg": "1.02s",
-          "latencyStdev": "334.80ms",
-          "latencyMax": "2.43s",
-          "totalRequests": 7245,
-          "startTime": 1774634851,
-          "endTime": 1774634866
+          "latencyAvg": "1.30s",
+          "latencyStdev": "364.34ms",
+          "latencyMax": "2.97s",
+          "totalRequests": 5650,
+          "startTime": 1775059620,
+          "endTime": 1775059635
         },
         {
-          "latencyAvg": "1.27s",
-          "latencyStdev": "431.72ms",
-          "latencyMax": "3.37s",
-          "totalRequests": 5764,
-          "startTime": 1774634868,
-          "endTime": 1774634883
+          "latencyAvg": "1.62s",
+          "latencyStdev": "455.20ms",
+          "latencyMax": "3.44s",
+          "totalRequests": 4461,
+          "startTime": 1775059637,
+          "endTime": 1775059652
         }
       ],
       "rails": [
         {
-          "latencyAvg": "82.75ms",
-          "latencyStdev": "32.71ms",
-          "latencyMax": "322.18ms",
-          "totalRequests": 93211,
-          "startTime": 1774635821,
-          "endTime": 1774635836
+          "latencyAvg": "109.50ms",
+          "latencyStdev": "54.75ms",
+          "latencyMax": "411.12ms",
+          "totalRequests": 70950,
+          "startTime": 1775060601,
+          "endTime": 1775060616
         },
         {
-          "latencyAvg": "202.92ms",
-          "latencyStdev": "77.71ms",
-          "latencyMax": "629.49ms",
-          "totalRequests": 37831,
-          "startTime": 1774635838,
-          "endTime": 1774635854
+          "latencyAvg": "257.53ms",
+          "latencyStdev": "92.79ms",
+          "latencyMax": "918.90ms",
+          "totalRequests": 29644,
+          "startTime": 1775060618,
+          "endTime": 1775060633
         },
         {
-          "latencyAvg": "314.71ms",
-          "latencyStdev": "148.27ms",
-          "latencyMax": "857.44ms",
-          "totalRequests": 24294,
-          "startTime": 1774635856,
-          "endTime": 1774635871
+          "latencyAvg": "477.62ms",
+          "latencyStdev": "147.32ms",
+          "latencyMax": "1.04s",
+          "totalRequests": 15833,
+          "startTime": 1775060635,
+          "endTime": 1775060651
         },
         {
-          "latencyAvg": "422.52ms",
-          "latencyStdev": "115.63ms",
-          "latencyMax": "837.83ms",
-          "totalRequests": 17928,
-          "startTime": 1774635873,
-          "endTime": 1774635888
+          "latencyAvg": "561.84ms",
+          "latencyStdev": "176.23ms",
+          "latencyMax": "1.21s",
+          "totalRequests": 13415,
+          "startTime": 1775060653,
+          "endTime": 1775060668
         },
         {
-          "latencyAvg": "543.77ms",
-          "latencyStdev": "185.56ms",
-          "latencyMax": "1.45s",
-          "totalRequests": 13901,
-          "startTime": 1774635890,
-          "endTime": 1774635905
+          "latencyAvg": "719.08ms",
+          "latencyStdev": "236.80ms",
+          "latencyMax": "1.41s",
+          "totalRequests": 10437,
+          "startTime": 1775060670,
+          "endTime": 1775060685
         }
       ]
     },
     "update": {
-      "echo": [
+      "django": [
         {
-          "latencyAvg": "54.18ms",
-          "latencyStdev": "21.47ms",
-          "latencyMax": "261.99ms",
-          "totalRequests": 142852,
-          "startTime": 1774633106,
-          "endTime": 1774633121
+          "latencyAvg": "300.67ms",
+          "latencyStdev": "164.44ms",
+          "latencyMax": "939.27ms",
+          "totalRequests": 25849,
+          "startTime": 1775055545,
+          "endTime": 1775055560
         },
         {
-          "latencyAvg": "194.31ms",
-          "latencyStdev": "47.36ms",
-          "latencyMax": "601.32ms",
-          "totalRequests": 39394,
-          "startTime": 1774633123,
-          "endTime": 1774633138
+          "latencyAvg": "869.59ms",
+          "latencyStdev": "235.49ms",
+          "latencyMax": "1.58s",
+          "totalRequests": 8589,
+          "startTime": 1775055562,
+          "endTime": 1775055578
         },
         {
-          "latencyAvg": "390.66ms",
-          "latencyStdev": "87.25ms",
-          "latencyMax": "1.29s",
-          "totalRequests": 19496,
-          "startTime": 1774633140,
-          "endTime": 1774633156
+          "latencyAvg": "1.47s",
+          "latencyStdev": "563.69ms",
+          "latencyMax": "2.40s",
+          "totalRequests": 4964,
+          "startTime": 1775055580,
+          "endTime": 1775055595
         },
         {
-          "latencyAvg": "569.66ms",
-          "latencyStdev": "80.83ms",
-          "latencyMax": "997.44ms",
-          "totalRequests": 13222,
-          "startTime": 1774633158,
-          "endTime": 1774633173
+          "latencyAvg": "2.17s",
+          "latencyStdev": "1.12s",
+          "latencyMax": "4.27s",
+          "totalRequests": 3159,
+          "startTime": 1775055597,
+          "endTime": 1775055612
         },
         {
-          "latencyAvg": "744.16ms",
-          "latencyStdev": "103.34ms",
-          "latencyMax": "1.65s",
-          "totalRequests": 10101,
-          "startTime": 1774633175,
-          "endTime": 1774633190
-        }
-      ],
-      "fastapi": [
-        {
-          "latencyAvg": "126.89ms",
-          "latencyStdev": "66.80ms",
-          "latencyMax": "1.14s",
-          "totalRequests": 62545,
-          "startTime": 1774633950,
-          "endTime": 1774633965
-        },
-        {
-          "latencyAvg": "230.95ms",
-          "latencyStdev": "74.17ms",
-          "latencyMax": "1.46s",
-          "totalRequests": 33243,
-          "startTime": 1774633967,
-          "endTime": 1774633982
-        },
-        {
-          "latencyAvg": "369.57ms",
-          "latencyStdev": "214.89ms",
-          "latencyMax": "3.19s",
-          "totalRequests": 21430,
-          "startTime": 1774633984,
-          "endTime": 1774633999
-        },
-        {
-          "latencyAvg": "475.81ms",
-          "latencyStdev": "244.58ms",
-          "latencyMax": "2.53s",
-          "totalRequests": 16432,
-          "startTime": 1774634001,
-          "endTime": 1774634016
-        },
-        {
-          "latencyAvg": "721.62ms",
-          "latencyStdev": "857.89ms",
-          "latencyMax": "7.83s",
-          "totalRequests": 13274,
-          "connect": 0,
-          "read": 0,
-          "write": 0,
-          "timeout": 3,
-          "startTime": 1774634018,
-          "endTime": 1774634033
-        }
-      ],
-      "laravel": [
-        {
-          "latencyAvg": "415.11ms",
-          "latencyStdev": "238.96ms",
-          "latencyMax": "1.35s",
-          "totalRequests": 18427,
-          "startTime": 1774634916,
-          "endTime": 1774634931
-        },
-        {
-          "latencyAvg": "941.39ms",
-          "latencyStdev": "396.36ms",
-          "latencyMax": "3.11s",
-          "totalRequests": 7915,
-          "startTime": 1774634933,
-          "endTime": 1774634948
-        },
-        {
-          "latencyAvg": "1.57s",
-          "latencyStdev": "378.43ms",
-          "latencyMax": "2.85s",
-          "totalRequests": 4713,
-          "startTime": 1774634950,
-          "endTime": 1774634965
-        },
-        {
-          "latencyAvg": "2.14s",
-          "latencyStdev": "450.95ms",
-          "latencyMax": "3.80s",
-          "totalRequests": 3270,
-          "startTime": 1774634967,
-          "endTime": 1774634983
-        },
-        {
-          "latencyAvg": "2.71s",
-          "latencyStdev": "454.61ms",
-          "latencyMax": "4.14s",
-          "totalRequests": 2494,
-          "startTime": 1774634985,
-          "endTime": 1774635000
-        }
-      ],
-      "rails": [
-        {
-          "latencyAvg": "121.97ms",
-          "latencyStdev": "49.37ms",
-          "latencyMax": "388.27ms",
-          "totalRequests": 62937,
-          "startTime": 1774635938,
-          "endTime": 1774635953
-        },
-        {
-          "latencyAvg": "263.33ms",
-          "latencyStdev": "74.99ms",
-          "latencyMax": "676.90ms",
-          "totalRequests": 28946,
-          "startTime": 1774635955,
-          "endTime": 1774635970
-        },
-        {
-          "latencyAvg": "394.18ms",
-          "latencyStdev": "125.14ms",
-          "latencyMax": "814.32ms",
-          "totalRequests": 19241,
-          "startTime": 1774635972,
-          "endTime": 1774635987
-        },
-        {
-          "latencyAvg": "549.56ms",
-          "latencyStdev": "253.15ms",
-          "latencyMax": "1.96s",
-          "totalRequests": 13949,
-          "startTime": 1774635989,
-          "endTime": 1774636004
-        },
-        {
-          "latencyAvg": "639.33ms",
-          "latencyStdev": "182.27ms",
-          "latencyMax": "1.24s",
-          "totalRequests": 11746,
-          "startTime": 1774636006,
-          "endTime": 1774636021
-        }
-      ]
-    },
-    "json": {
-      "deno": [
-        {
-          "latencyAvg": "363.03us",
-          "latencyStdev": "532.30us",
-          "latencyMax": "14.21ms",
-          "totalRequests": 885346,
-          "startTime": 1774632377,
-          "endTime": 1774632392
-        },
-        {
-          "latencyAvg": "669.38us",
-          "latencyStdev": "0.96ms",
-          "latencyMax": "19.45ms",
-          "totalRequests": 1022508,
-          "startTime": 1774632394,
-          "endTime": 1774632409
-        },
-        {
-          "latencyAvg": "1.14ms",
-          "latencyStdev": "1.27ms",
-          "latencyMax": "17.70ms",
-          "totalRequests": 1044828,
-          "startTime": 1774632411,
-          "endTime": 1774632426
-        },
-        {
-          "latencyAvg": "1.46ms",
-          "latencyStdev": "1.42ms",
-          "latencyMax": "24.49ms",
-          "totalRequests": 1496406,
-          "startTime": 1774632429,
-          "endTime": 1774632444
-        },
-        {
-          "latencyAvg": "2.59ms",
-          "latencyStdev": "2.31ms",
-          "latencyMax": "38.89ms",
-          "totalRequests": 1609122,
-          "startTime": 1774632446,
-          "endTime": 1774632461
-        },
-        {
-          "latencyAvg": "4.59ms",
-          "latencyStdev": "3.53ms",
-          "latencyMax": "48.77ms",
-          "totalRequests": 1667547,
-          "startTime": 1774632463,
-          "endTime": 1774632478
+          "latencyAvg": "2.98s",
+          "latencyStdev": "1.00s",
+          "latencyMax": "5.15s",
+          "totalRequests": 2303,
+          "startTime": 1775055614,
+          "endTime": 1775055629
         }
       ],
       "echo": [
         {
-          "latencyAvg": "456.96us",
-          "latencyStdev": "0.85ms",
-          "latencyMax": "24.93ms",
-          "totalRequests": 996906,
-          "startTime": 1774632857,
-          "endTime": 1774632872
+          "latencyAvg": "66.70ms",
+          "latencyStdev": "25.69ms",
+          "latencyMax": "322.00ms",
+          "totalRequests": 115617,
+          "startTime": 1775056384,
+          "endTime": 1775056399
         },
         {
-          "latencyAvg": "784.84us",
-          "latencyStdev": "1.28ms",
-          "latencyMax": "34.34ms",
-          "totalRequests": 1128112,
-          "startTime": 1774632874,
-          "endTime": 1774632889
+          "latencyAvg": "252.42ms",
+          "latencyStdev": "68.04ms",
+          "latencyMax": "1.01s",
+          "totalRequests": 30286,
+          "startTime": 1775056401,
+          "endTime": 1775056416
         },
         {
-          "latencyAvg": "1.52ms",
-          "latencyStdev": "2.11ms",
-          "latencyMax": "37.14ms",
-          "totalRequests": 1042092,
-          "startTime": 1774632891,
-          "endTime": 1774632906
+          "latencyAvg": "501.08ms",
+          "latencyStdev": "83.02ms",
+          "latencyMax": "1.05s",
+          "totalRequests": 15095,
+          "startTime": 1775056418,
+          "endTime": 1775056433
         },
         {
-          "latencyAvg": "3.40ms",
-          "latencyStdev": "4.60ms",
-          "latencyMax": "78.65ms",
-          "totalRequests": 892402,
-          "startTime": 1774632908,
-          "endTime": 1774632923
+          "latencyAvg": "737.37ms",
+          "latencyStdev": "111.91ms",
+          "latencyMax": "1.40s",
+          "totalRequests": 10177,
+          "startTime": 1775056435,
+          "endTime": 1775056450
         },
         {
-          "latencyAvg": "6.29ms",
-          "latencyStdev": "8.29ms",
-          "latencyMax": "131.60ms",
-          "totalRequests": 915860,
-          "startTime": 1774632925,
-          "endTime": 1774632940
-        },
-        {
-          "latencyAvg": "11.99ms",
-          "latencyStdev": "14.28ms",
-          "latencyMax": "155.04ms",
-          "totalRequests": 896321,
-          "startTime": 1774632942,
-          "endTime": 1774632957
+          "latencyAvg": "960.34ms",
+          "latencyStdev": "130.47ms",
+          "latencyMax": "1.83s",
+          "totalRequests": 7740,
+          "startTime": 1775056452,
+          "endTime": 1775056467
         }
       ],
       "fastapi": [
         {
-          "latencyAvg": "759.26us",
-          "latencyStdev": "835.73us",
-          "latencyMax": "20.28ms",
-          "totalRequests": 373822,
-          "startTime": 1774633700,
-          "endTime": 1774633715
+          "latencyAvg": "166.76ms",
+          "latencyStdev": "108.48ms",
+          "latencyMax": "2.11s",
+          "totalRequests": 48648,
+          "startTime": 1775057236,
+          "endTime": 1775057251
         },
         {
-          "latencyAvg": "1.32ms",
-          "latencyStdev": "1.46ms",
-          "latencyMax": "36.10ms",
-          "totalRequests": 428715,
-          "startTime": 1774633717,
-          "endTime": 1774633732
+          "latencyAvg": "308.57ms",
+          "latencyStdev": "94.04ms",
+          "latencyMax": "908.55ms",
+          "totalRequests": 24725,
+          "startTime": 1775057253,
+          "endTime": 1775057268
         },
         {
-          "latencyAvg": "2.35ms",
-          "latencyStdev": "1.73ms",
-          "latencyMax": "35.62ms",
-          "totalRequests": 439412,
-          "startTime": 1774633734,
-          "endTime": 1774633749
+          "latencyAvg": "516.77ms",
+          "latencyStdev": "215.24ms",
+          "latencyMax": "2.79s",
+          "totalRequests": 14825,
+          "startTime": 1775057270,
+          "endTime": 1775057285
         },
         {
-          "latencyAvg": "4.21ms",
-          "latencyStdev": "2.90ms",
-          "latencyMax": "57.15ms",
-          "totalRequests": 488073,
-          "startTime": 1774633751,
-          "endTime": 1774633766
+          "latencyAvg": "669.16ms",
+          "latencyStdev": "290.14ms",
+          "latencyMax": "3.18s",
+          "totalRequests": 11407,
+          "startTime": 1775057287,
+          "endTime": 1775057302
         },
         {
-          "latencyAvg": "8.79ms",
-          "latencyStdev": "5.33ms",
-          "latencyMax": "92.96ms",
-          "totalRequests": 457945,
-          "startTime": 1774633768,
-          "endTime": 1774633783
-        },
-        {
-          "latencyAvg": "17.92ms",
-          "latencyStdev": "9.01ms",
-          "latencyMax": "211.27ms",
-          "totalRequests": 440325,
-          "startTime": 1774633785,
-          "endTime": 1774633800
-        }
-      ],
-      "laravel": [
-        {
-          "latencyAvg": "5.07ms",
-          "latencyStdev": "2.56ms",
-          "latencyMax": "28.29ms",
-          "totalRequests": 48286,
-          "startTime": 1774634666,
-          "endTime": 1774634681
-        },
-        {
-          "latencyAvg": "9.72ms",
-          "latencyStdev": "4.70ms",
-          "latencyMax": "57.28ms",
-          "totalRequests": 50104,
-          "startTime": 1774634683,
-          "endTime": 1774634698
-        },
-        {
-          "latencyAvg": "19.61ms",
-          "latencyStdev": "9.12ms",
-          "latencyMax": "101.55ms",
-          "totalRequests": 49614,
-          "startTime": 1774634700,
-          "endTime": 1774634715
-        },
-        {
-          "latencyAvg": "41.55ms",
-          "latencyStdev": "22.04ms",
-          "latencyMax": "351.70ms",
-          "totalRequests": 47428,
-          "startTime": 1774634717,
-          "endTime": 1774634732
-        },
-        {
-          "latencyAvg": "83.54ms",
-          "latencyStdev": "50.74ms",
-          "latencyMax": "463.81ms",
-          "totalRequests": 47979,
-          "startTime": 1774634734,
-          "endTime": 1774634750
-        },
-        {
-          "latencyAvg": "177.20ms",
-          "latencyStdev": "138.81ms",
-          "latencyMax": "761.07ms",
-          "totalRequests": 45725,
-          "startTime": 1774634752,
-          "endTime": 1774634767
-        }
-      ],
-      "rails": [
-        {
-          "latencyAvg": "0.91ms",
-          "latencyStdev": "0.96ms",
-          "latencyMax": "30.46ms",
-          "totalRequests": 318190,
-          "startTime": 1774635688,
-          "endTime": 1774635703
-        },
-        {
-          "latencyAvg": "1.90ms",
-          "latencyStdev": "2.17ms",
-          "latencyMax": "49.68ms",
-          "totalRequests": 323886,
-          "startTime": 1774635705,
-          "endTime": 1774635720
-        },
-        {
-          "latencyAvg": "3.74ms",
-          "latencyStdev": "4.10ms",
-          "latencyMax": "85.43ms",
-          "totalRequests": 331515,
-          "startTime": 1774635722,
-          "endTime": 1774635737
-        },
-        {
-          "latencyAvg": "6.23ms",
-          "latencyStdev": "6.27ms",
-          "latencyMax": "151.02ms",
-          "totalRequests": 366033,
-          "startTime": 1774635739,
-          "endTime": 1774635754
-        },
-        {
-          "latencyAvg": "12.22ms",
-          "latencyStdev": "9.67ms",
-          "latencyMax": "113.19ms",
-          "totalRequests": 347387,
-          "startTime": 1774635756,
-          "endTime": 1774635771
-        },
-        {
-          "latencyAvg": "23.50ms",
-          "latencyStdev": "15.33ms",
-          "latencyMax": "244.17ms",
-          "totalRequests": 347227,
-          "startTime": 1774635773,
-          "endTime": 1774635789
-        }
-      ]
-    },
-    "plaintext": {
-      "deno": [
-        {
-          "latencyAvg": "22.71ms",
-          "latencyStdev": "12.07ms",
-          "latencyMax": "79.12ms",
-          "totalRequests": 1667912,
-          "startTime": 1774632511,
-          "endTime": 1774632526
-        },
-        {
-          "latencyAvg": "50.71ms",
-          "latencyStdev": "43.60ms",
-          "latencyMax": "468.96ms",
-          "totalRequests": 3417737,
-          "startTime": 1774632528,
-          "endTime": 1774632543
-        },
-        {
-          "latencyAvg": "310.89ms",
-          "latencyStdev": "180.60ms",
-          "latencyMax": "968.48ms",
-          "totalRequests": 1833261,
-          "startTime": 1774632545,
-          "endTime": 1774632560
-        },
-        {
-          "latencyAvg": "1.30s",
-          "latencyStdev": "714.64ms",
-          "latencyMax": "3.31s",
-          "totalRequests": 1367794,
-          "startTime": 1774632562,
-          "endTime": 1774632578
-        }
-      ],
-      "echo": [
-        {
-          "latencyAvg": "68.24ms",
-          "latencyStdev": "76.72ms",
-          "latencyMax": "739.68ms",
-          "totalRequests": 1554954,
-          "startTime": 1774633356,
-          "endTime": 1774633371
-        },
-        {
-          "latencyAvg": "412.92ms",
-          "latencyStdev": "378.15ms",
-          "latencyMax": "3.42s",
-          "totalRequests": 1464501,
-          "startTime": 1774633373,
-          "endTime": 1774633388
-        },
-        {
-          "latencyAvg": "1.39s",
-          "latencyStdev": "1.24s",
-          "latencyMax": "8.00s",
-          "totalRequests": 1449899,
-          "connect": 0,
-          "read": 0,
-          "write": 0,
-          "timeout": 178,
-          "startTime": 1774633390,
-          "endTime": 1774633406
-        },
-        {
-          "latencyAvg": "2.06s",
-          "latencyStdev": "1.66s",
-          "latencyMax": "7.98s",
-          "totalRequests": 1339119,
-          "connect": 0,
-          "read": 0,
-          "write": 0,
-          "timeout": 437,
-          "startTime": 1774633408,
-          "endTime": 1774633424
-        }
-      ],
-      "fastapi": [
-        {
-          "latencyAvg": "71.87ms",
-          "latencyStdev": "45.69ms",
-          "latencyMax": "306.77ms",
-          "totalRequests": 520355,
-          "startTime": 1774634199,
-          "endTime": 1774634215
-        },
-        {
-          "latencyAvg": "249.90ms",
-          "latencyStdev": "159.83ms",
-          "latencyMax": "1.74s",
-          "totalRequests": 488419,
-          "startTime": 1774634217,
-          "endTime": 1774634232
-        },
-        {
-          "latencyAvg": "1.12s",
-          "latencyStdev": "751.69ms",
-          "latencyMax": "7.98s",
-          "totalRequests": 458972,
-          "connect": 0,
-          "read": 0,
-          "write": 0,
-          "timeout": 469,
-          "startTime": 1774634234,
-          "endTime": 1774634249
-        },
-        {
-          "latencyAvg": "3.11s",
-          "latencyStdev": "1.49s",
-          "latencyMax": "8.00s",
-          "totalRequests": 358470,
-          "connect": 0,
-          "read": 0,
-          "write": 0,
-          "timeout": 285,
-          "startTime": 1774634251,
-          "endTime": 1774634267
-        }
-      ],
-      "laravel": [
-        {
-          "latencyAvg": "1.08s",
-          "latencyStdev": "909.28ms",
-          "latencyMax": "4.12s",
-          "totalRequests": 51902,
-          "startTime": 1774635166,
-          "endTime": 1774635181
-        },
-        {
-          "latencyAvg": "2.74s",
-          "latencyStdev": "1.53s",
-          "latencyMax": "7.93s",
-          "totalRequests": 49740,
-          "connect": 0,
-          "read": 0,
-          "write": 0,
-          "timeout": 4,
-          "startTime": 1774635183,
-          "endTime": 1774635198
-        },
-        {
-          "latencyAvg": "4.05s",
-          "latencyStdev": "1.78s",
-          "latencyMax": "7.98s",
-          "totalRequests": 50453,
-          "connect": 0,
-          "read": 0,
-          "write": 0,
-          "timeout": 699,
-          "startTime": 1774635200,
-          "endTime": 1774635216
-        },
-        {
-          "latencyAvg": "4.94s",
-          "latencyStdev": "1.01s",
-          "latencyMax": "7.60s",
-          "totalRequests": 30849,
+          "latencyAvg": "847.61ms",
+          "latencyStdev": "672.42ms",
+          "latencyMax": "7.89s",
+          "totalRequests": 9247,
           "connect": 0,
           "read": 0,
           "write": 0,
           "timeout": 5,
-          "startTime": 1774635218,
-          "endTime": 1774635233
+          "startTime": 1775057304,
+          "endTime": 1775057320
+        }
+      ],
+      "gin": [
+        {
+          "latencyAvg": "95.72ms",
+          "latencyStdev": "41.80ms",
+          "latencyMax": "425.43ms",
+          "totalRequests": 80753,
+          "startTime": 1775058095,
+          "endTime": 1775058110
+        },
+        {
+          "latencyAvg": "404.63ms",
+          "latencyStdev": "96.31ms",
+          "latencyMax": "861.93ms",
+          "totalRequests": 18756,
+          "startTime": 1775058112,
+          "endTime": 1775058128
+        },
+        {
+          "latencyAvg": "778.98ms",
+          "latencyStdev": "118.41ms",
+          "latencyMax": "1.24s",
+          "totalRequests": 9574,
+          "startTime": 1775058130,
+          "endTime": 1775058145
+        },
+        {
+          "latencyAvg": "1.20s",
+          "latencyStdev": "149.38ms",
+          "latencyMax": "1.72s",
+          "totalRequests": 6152,
+          "startTime": 1775058147,
+          "endTime": 1775058162
+        },
+        {
+          "latencyAvg": "1.71s",
+          "latencyStdev": "184.40ms",
+          "latencyMax": "2.43s",
+          "totalRequests": 4193,
+          "startTime": 1775058164,
+          "endTime": 1775058179
+        }
+      ],
+      "laravel": [
+        {
+          "latencyAvg": "606.23ms",
+          "latencyStdev": "354.75ms",
+          "latencyMax": "2.17s",
+          "totalRequests": 12675,
+          "startTime": 1775059685,
+          "endTime": 1775059700
+        },
+        {
+          "latencyAvg": "1.25s",
+          "latencyStdev": "402.27ms",
+          "latencyMax": "2.88s",
+          "totalRequests": 5902,
+          "startTime": 1775059702,
+          "endTime": 1775059717
+        },
+        {
+          "latencyAvg": "1.93s",
+          "latencyStdev": "448.86ms",
+          "latencyMax": "3.63s",
+          "totalRequests": 3646,
+          "startTime": 1775059719,
+          "endTime": 1775059735
+        },
+        {
+          "latencyAvg": "3.07s",
+          "latencyStdev": "553.58ms",
+          "latencyMax": "5.08s",
+          "totalRequests": 2253,
+          "startTime": 1775059737,
+          "endTime": 1775059752
+        },
+        {
+          "latencyAvg": "3.67s",
+          "latencyStdev": "670.10ms",
+          "latencyMax": "5.33s",
+          "totalRequests": 1860,
+          "startTime": 1775059754,
+          "endTime": 1775059769
         }
       ],
       "rails": [
         {
-          "latencyAvg": "53.09ms",
-          "latencyStdev": "39.46ms",
-          "latencyMax": "374.78ms",
-          "totalRequests": 761394,
-          "startTime": 1774636187,
-          "endTime": 1774636202
+          "latencyAvg": "179.77ms",
+          "latencyStdev": "69.39ms",
+          "latencyMax": "520.41ms",
+          "totalRequests": 42628,
+          "startTime": 1775060718,
+          "endTime": 1775060733
         },
         {
-          "latencyAvg": "306.82ms",
-          "latencyStdev": "252.63ms",
-          "latencyMax": "3.24s",
-          "totalRequests": 556549,
-          "startTime": 1774636204,
-          "endTime": 1774636220
+          "latencyAvg": "372.43ms",
+          "latencyStdev": "111.80ms",
+          "latencyMax": "817.70ms",
+          "totalRequests": 20426,
+          "startTime": 1775060735,
+          "endTime": 1775060750
         },
         {
-          "latencyAvg": "1.13s",
-          "latencyStdev": "921.34ms",
-          "latencyMax": "7.99s",
-          "totalRequests": 504605,
+          "latencyAvg": "522.52ms",
+          "latencyStdev": "228.58ms",
+          "latencyMax": "1.48s",
+          "totalRequests": 14599,
+          "startTime": 1775060752,
+          "endTime": 1775060767
+        },
+        {
+          "latencyAvg": "647.18ms",
+          "latencyStdev": "237.80ms",
+          "latencyMax": "1.74s",
+          "totalRequests": 11629,
+          "startTime": 1775060769,
+          "endTime": 1775060784
+        },
+        {
+          "latencyAvg": "782.85ms",
+          "latencyStdev": "221.85ms",
+          "latencyMax": "1.72s",
+          "totalRequests": 9502,
+          "startTime": 1775060786,
+          "endTime": 1775060801
+        }
+      ]
+    },
+    "json": {
+      "actix": [
+        {
+          "latencyAvg": "261.49us",
+          "latencyStdev": "726.46us",
+          "latencyMax": "37.67ms",
+          "totalRequests": 1193341,
+          "startTime": 1775052722,
+          "endTime": 1775052738
+        },
+        {
+          "latencyAvg": "604.60us",
+          "latencyStdev": "1.38ms",
+          "latencyMax": "37.19ms",
+          "totalRequests": 1214636,
+          "startTime": 1775052740,
+          "endTime": 1775052755
+        },
+        {
+          "latencyAvg": "777.22us",
+          "latencyStdev": "1.08ms",
+          "latencyMax": "28.52ms",
+          "totalRequests": 1463987,
+          "startTime": 1775052757,
+          "endTime": 1775052772
+        },
+        {
+          "latencyAvg": "1.23ms",
+          "latencyStdev": "1.26ms",
+          "latencyMax": "24.72ms",
+          "totalRequests": 1694542,
+          "startTime": 1775052774,
+          "endTime": 1775052789
+        },
+        {
+          "latencyAvg": "2.21ms",
+          "latencyStdev": "2.21ms",
+          "latencyMax": "48.49ms",
+          "totalRequests": 1811915,
+          "startTime": 1775052791,
+          "endTime": 1775052806
+        },
+        {
+          "latencyAvg": "4.07ms",
+          "latencyStdev": "3.12ms",
+          "latencyMax": "29.83ms",
+          "totalRequests": 1732918,
+          "startTime": 1775052808,
+          "endTime": 1775052823
+        }
+      ],
+      "axum": [
+        {
+          "latencyAvg": "335.20us",
+          "latencyStdev": "583.28us",
+          "latencyMax": "22.85ms",
+          "totalRequests": 1015982,
+          "startTime": 1775053441,
+          "endTime": 1775053456
+        },
+        {
+          "latencyAvg": "418.44us",
+          "latencyStdev": "557.28us",
+          "latencyMax": "30.17ms",
+          "totalRequests": 1264644,
+          "startTime": 1775053458,
+          "endTime": 1775053473
+        },
+        {
+          "latencyAvg": "809.26us",
+          "latencyStdev": "1.02ms",
+          "latencyMax": "27.77ms",
+          "totalRequests": 1412184,
+          "startTime": 1775053475,
+          "endTime": 1775053490
+        },
+        {
+          "latencyAvg": "1.47ms",
+          "latencyStdev": "1.70ms",
+          "latencyMax": "35.82ms",
+          "totalRequests": 1530715,
+          "startTime": 1775053493,
+          "endTime": 1775053508
+        },
+        {
+          "latencyAvg": "2.42ms",
+          "latencyStdev": "2.18ms",
+          "latencyMax": "33.79ms",
+          "totalRequests": 1629640,
+          "startTime": 1775053510,
+          "endTime": 1775053525
+        },
+        {
+          "latencyAvg": "4.42ms",
+          "latencyStdev": "3.37ms",
+          "latencyMax": "59.63ms",
+          "totalRequests": 1628685,
+          "startTime": 1775053527,
+          "endTime": 1775053542
+        }
+      ],
+      "basolato": [
+        {
+          "latencyAvg": "426.02us",
+          "latencyStdev": "614.67us",
+          "latencyMax": "13.72ms",
+          "totalRequests": 788778,
+          "startTime": 1775054237,
+          "endTime": 1775054252
+        },
+        {
+          "latencyAvg": "662.74us",
+          "latencyStdev": "800.60us",
+          "latencyMax": "15.17ms",
+          "totalRequests": 938751,
+          "startTime": 1775054254,
+          "endTime": 1775054269
+        },
+        {
+          "latencyAvg": "1.01ms",
+          "latencyStdev": "1.02ms",
+          "latencyMax": "16.81ms",
+          "totalRequests": 1113837,
+          "startTime": 1775054271,
+          "endTime": 1775054286
+        },
+        {
+          "latencyAvg": "1.85ms",
+          "latencyStdev": "1.65ms",
+          "latencyMax": "31.56ms",
+          "totalRequests": 1134173,
+          "startTime": 1775054288,
+          "endTime": 1775054303
+        },
+        {
+          "latencyAvg": "3.27ms",
+          "latencyStdev": "2.03ms",
+          "latencyMax": "30.61ms",
+          "totalRequests": 1167549,
+          "startTime": 1775054305,
+          "endTime": 1775054320
+        },
+        {
+          "latencyAvg": "5.95ms",
+          "latencyStdev": "3.15ms",
+          "latencyMax": "94.78ms",
+          "totalRequests": 1247870,
+          "startTime": 1775054322,
+          "endTime": 1775054337
+        }
+      ],
+      "deno": [
+        {
+          "latencyAvg": "518.13us",
+          "latencyStdev": "678.40us",
+          "latencyMax": "16.11ms",
+          "totalRequests": 586593,
+          "startTime": 1775054815,
+          "endTime": 1775054830
+        },
+        {
+          "latencyAvg": "733.57us",
+          "latencyStdev": "0.88ms",
+          "latencyMax": "17.75ms",
+          "totalRequests": 846042,
+          "startTime": 1775054832,
+          "endTime": 1775054847
+        },
+        {
+          "latencyAvg": "1.21ms",
+          "latencyStdev": "1.46ms",
+          "latencyMax": "41.39ms",
+          "totalRequests": 1046035,
+          "startTime": 1775054849,
+          "endTime": 1775054864
+        },
+        {
+          "latencyAvg": "1.90ms",
+          "latencyStdev": "1.93ms",
+          "latencyMax": "49.58ms",
+          "totalRequests": 1181553,
+          "startTime": 1775054866,
+          "endTime": 1775054881
+        },
+        {
+          "latencyAvg": "3.45ms",
+          "latencyStdev": "3.09ms",
+          "latencyMax": "40.17ms",
+          "totalRequests": 1218642,
+          "startTime": 1775054883,
+          "endTime": 1775054898
+        },
+        {
+          "latencyAvg": "6.44ms",
+          "latencyStdev": "5.13ms",
+          "latencyMax": "51.98ms",
+          "totalRequests": 1244726,
+          "startTime": 1775054900,
+          "endTime": 1775054916
+        }
+      ],
+      "django": [
+        {
+          "latencyAvg": "2.49ms",
+          "latencyStdev": "2.01ms",
+          "latencyMax": "32.73ms",
+          "totalRequests": 107651,
+          "startTime": 1775055295,
+          "endTime": 1775055310
+        },
+        {
+          "latencyAvg": "5.22ms",
+          "latencyStdev": "4.73ms",
+          "latencyMax": "99.32ms",
+          "totalRequests": 104794,
+          "startTime": 1775055312,
+          "endTime": 1775055327
+        },
+        {
+          "latencyAvg": "9.57ms",
+          "latencyStdev": "7.40ms",
+          "latencyMax": "90.92ms",
+          "totalRequests": 111330,
+          "startTime": 1775055329,
+          "endTime": 1775055344
+        },
+        {
+          "latencyAvg": "19.01ms",
+          "latencyStdev": "13.74ms",
+          "latencyMax": "218.47ms",
+          "totalRequests": 109395,
+          "startTime": 1775055346,
+          "endTime": 1775055361
+        },
+        {
+          "latencyAvg": "38.31ms",
+          "latencyStdev": "26.41ms",
+          "latencyMax": "428.48ms",
+          "totalRequests": 106864,
+          "startTime": 1775055363,
+          "endTime": 1775055378
+        },
+        {
+          "latencyAvg": "74.93ms",
+          "latencyStdev": "42.86ms",
+          "latencyMax": "449.98ms",
+          "totalRequests": 106153,
+          "startTime": 1775055380,
+          "endTime": 1775055396
+        }
+      ],
+      "echo": [
+        {
+          "latencyAvg": "0.86ms",
+          "latencyStdev": "1.59ms",
+          "latencyMax": "47.90ms",
+          "totalRequests": 594872,
+          "startTime": 1775056134,
+          "endTime": 1775056149
+        },
+        {
+          "latencyAvg": "1.24ms",
+          "latencyStdev": "1.96ms",
+          "latencyMax": "35.89ms",
+          "totalRequests": 742010,
+          "startTime": 1775056151,
+          "endTime": 1775056166
+        },
+        {
+          "latencyAvg": "2.05ms",
+          "latencyStdev": "2.71ms",
+          "latencyMax": "37.57ms",
+          "totalRequests": 743550,
+          "startTime": 1775056168,
+          "endTime": 1775056183
+        },
+        {
+          "latencyAvg": "3.89ms",
+          "latencyStdev": "5.08ms",
+          "latencyMax": "131.53ms",
+          "totalRequests": 745781,
+          "startTime": 1775056185,
+          "endTime": 1775056200
+        },
+        {
+          "latencyAvg": "8.17ms",
+          "latencyStdev": "11.02ms",
+          "latencyMax": "145.73ms",
+          "totalRequests": 723285,
+          "startTime": 1775056202,
+          "endTime": 1775056217
+        },
+        {
+          "latencyAvg": "16.15ms",
+          "latencyStdev": "20.14ms",
+          "latencyMax": "228.72ms",
+          "totalRequests": 702326,
+          "startTime": 1775056219,
+          "endTime": 1775056234
+        }
+      ],
+      "fastapi": [
+        {
+          "latencyAvg": "1.02ms",
+          "latencyStdev": "1.26ms",
+          "latencyMax": "33.58ms",
+          "totalRequests": 306253,
+          "startTime": 1775056986,
+          "endTime": 1775057001
+        },
+        {
+          "latencyAvg": "1.59ms",
+          "latencyStdev": "1.42ms",
+          "latencyMax": "33.70ms",
+          "totalRequests": 347046,
+          "startTime": 1775057003,
+          "endTime": 1775057018
+        },
+        {
+          "latencyAvg": "3.02ms",
+          "latencyStdev": "2.43ms",
+          "latencyMax": "45.19ms",
+          "totalRequests": 354818,
+          "startTime": 1775057020,
+          "endTime": 1775057035
+        },
+        {
+          "latencyAvg": "5.99ms",
+          "latencyStdev": "4.80ms",
+          "latencyMax": "91.22ms",
+          "totalRequests": 356620,
+          "startTime": 1775057037,
+          "endTime": 1775057052
+        },
+        {
+          "latencyAvg": "12.10ms",
+          "latencyStdev": "7.87ms",
+          "latencyMax": "110.50ms",
+          "totalRequests": 337651,
+          "startTime": 1775057054,
+          "endTime": 1775057069
+        },
+        {
+          "latencyAvg": "23.08ms",
+          "latencyStdev": "14.95ms",
+          "latencyMax": "358.11ms",
+          "totalRequests": 349789,
+          "startTime": 1775057071,
+          "endTime": 1775057086
+        }
+      ],
+      "gin": [
+        {
+          "latencyAvg": "0.87ms",
+          "latencyStdev": "1.62ms",
+          "latencyMax": "32.56ms",
+          "totalRequests": 581461,
+          "startTime": 1775057845,
+          "endTime": 1775057861
+        },
+        {
+          "latencyAvg": "1.27ms",
+          "latencyStdev": "1.91ms",
+          "latencyMax": "70.20ms",
+          "totalRequests": 661551,
+          "startTime": 1775057863,
+          "endTime": 1775057878
+        },
+        {
+          "latencyAvg": "2.55ms",
+          "latencyStdev": "3.53ms",
+          "latencyMax": "60.95ms",
+          "totalRequests": 632209,
+          "startTime": 1775057880,
+          "endTime": 1775057895
+        },
+        {
+          "latencyAvg": "4.87ms",
+          "latencyStdev": "6.58ms",
+          "latencyMax": "82.75ms",
+          "totalRequests": 689222,
+          "startTime": 1775057897,
+          "endTime": 1775057912
+        },
+        {
+          "latencyAvg": "9.96ms",
+          "latencyStdev": "13.42ms",
+          "latencyMax": "173.09ms",
+          "totalRequests": 688609,
+          "startTime": 1775057914,
+          "endTime": 1775057929
+        },
+        {
+          "latencyAvg": "19.85ms",
+          "latencyStdev": "26.52ms",
+          "latencyMax": "288.10ms",
+          "totalRequests": 647455,
+          "startTime": 1775057931,
+          "endTime": 1775057946
+        }
+      ],
+      "hono": [
+        {
+          "latencyAvg": "0.89ms",
+          "latencyStdev": "1.50ms",
+          "latencyMax": "36.65ms",
+          "totalRequests": 435342,
+          "startTime": 1775058471,
+          "endTime": 1775058486
+        },
+        {
+          "latencyAvg": "1.57ms",
+          "latencyStdev": "2.23ms",
+          "latencyMax": "44.87ms",
+          "totalRequests": 449837,
+          "startTime": 1775058488,
+          "endTime": 1775058503
+        },
+        {
+          "latencyAvg": "2.78ms",
+          "latencyStdev": "3.21ms",
+          "latencyMax": "62.17ms",
+          "totalRequests": 454594,
+          "startTime": 1775058505,
+          "endTime": 1775058520
+        },
+        {
+          "latencyAvg": "4.46ms",
+          "latencyStdev": "3.97ms",
+          "latencyMax": "102.40ms",
+          "totalRequests": 485249,
+          "startTime": 1775058522,
+          "endTime": 1775058537
+        },
+        {
+          "latencyAvg": "8.76ms",
+          "latencyStdev": "6.27ms",
+          "latencyMax": "168.47ms",
+          "totalRequests": 468044,
+          "startTime": 1775058539,
+          "endTime": 1775058554
+        },
+        {
+          "latencyAvg": "19.15ms",
+          "latencyStdev": "33.26ms",
+          "latencyMax": "758.83ms",
+          "totalRequests": 478819,
+          "startTime": 1775058556,
+          "endTime": 1775058571
+        }
+      ],
+      "jester": [
+        {
+          "latencyAvg": "274.24us",
+          "latencyStdev": "562.64us",
+          "latencyMax": "33.10ms",
+          "totalRequests": 1150185,
+          "startTime": 1775058810,
+          "endTime": 1775058825
+        },
+        {
+          "latencyAvg": "476.04us",
+          "latencyStdev": "667.35us",
+          "latencyMax": "19.02ms",
+          "totalRequests": 1288573,
+          "startTime": 1775058827,
+          "endTime": 1775058842
+        },
+        {
+          "latencyAvg": "0.85ms",
+          "latencyStdev": "1.27ms",
+          "latencyMax": "29.76ms",
+          "totalRequests": 1425084,
+          "startTime": 1775058844,
+          "endTime": 1775058859
+        },
+        {
+          "latencyAvg": "1.37ms",
+          "latencyStdev": "1.52ms",
+          "latencyMax": "34.82ms",
+          "totalRequests": 1573279,
+          "startTime": 1775058861,
+          "endTime": 1775058876
+        },
+        {
+          "latencyAvg": "2.33ms",
+          "latencyStdev": "2.12ms",
+          "latencyMax": "27.75ms",
+          "totalRequests": 1704404,
+          "startTime": 1775058878,
+          "endTime": 1775058893
+        },
+        {
+          "latencyAvg": "4.38ms",
+          "latencyStdev": "3.39ms",
+          "latencyMax": "56.66ms",
+          "totalRequests": 1636908,
+          "startTime": 1775058895,
+          "endTime": 1775058911
+        }
+      ],
+      "laravel": [
+        {
+          "latencyAvg": "7.01ms",
+          "latencyStdev": "3.89ms",
+          "latencyMax": "49.46ms",
+          "totalRequests": 35357,
+          "startTime": 1775059435,
+          "endTime": 1775059450
+        },
+        {
+          "latencyAvg": "13.48ms",
+          "latencyStdev": "6.98ms",
+          "latencyMax": "95.04ms",
+          "totalRequests": 36528,
+          "startTime": 1775059452,
+          "endTime": 1775059467
+        },
+        {
+          "latencyAvg": "26.50ms",
+          "latencyStdev": "12.86ms",
+          "latencyMax": "152.95ms",
+          "totalRequests": 36848,
+          "startTime": 1775059469,
+          "endTime": 1775059484
+        },
+        {
+          "latencyAvg": "53.93ms",
+          "latencyStdev": "32.61ms",
+          "latencyMax": "606.97ms",
+          "totalRequests": 37173,
+          "startTime": 1775059486,
+          "endTime": 1775059501
+        },
+        {
+          "latencyAvg": "109.41ms",
+          "latencyStdev": "62.12ms",
+          "latencyMax": "618.31ms",
+          "totalRequests": 36134,
+          "startTime": 1775059503,
+          "endTime": 1775059518
+        },
+        {
+          "latencyAvg": "223.31ms",
+          "latencyStdev": "114.65ms",
+          "latencyMax": "895.88ms",
+          "totalRequests": 34592,
+          "startTime": 1775059520,
+          "endTime": 1775059536
+        }
+      ],
+      "rails": [
+        {
+          "latencyAvg": "1.07ms",
+          "latencyStdev": "1.07ms",
+          "latencyMax": "18.56ms",
+          "totalRequests": 270315,
+          "startTime": 1775060468,
+          "endTime": 1775060483
+        },
+        {
+          "latencyAvg": "2.44ms",
+          "latencyStdev": "2.75ms",
+          "latencyMax": "66.35ms",
+          "totalRequests": 254136,
+          "startTime": 1775060485,
+          "endTime": 1775060500
+        },
+        {
+          "latencyAvg": "4.27ms",
+          "latencyStdev": "4.50ms",
+          "latencyMax": "76.84ms",
+          "totalRequests": 285968,
+          "startTime": 1775060502,
+          "endTime": 1775060517
+        },
+        {
+          "latencyAvg": "8.53ms",
+          "latencyStdev": "8.61ms",
+          "latencyMax": "111.72ms",
+          "totalRequests": 275683,
+          "startTime": 1775060519,
+          "endTime": 1775060534
+        },
+        {
+          "latencyAvg": "16.05ms",
+          "latencyStdev": "13.12ms",
+          "latencyMax": "133.57ms",
+          "totalRequests": 269037,
+          "startTime": 1775060536,
+          "endTime": 1775060551
+        },
+        {
+          "latencyAvg": "31.92ms",
+          "latencyStdev": "27.53ms",
+          "latencyMax": "251.97ms",
+          "totalRequests": 279172,
+          "startTime": 1775060553,
+          "endTime": 1775060568
+        }
+      ]
+    },
+    "plaintext": {
+      "actix": [
+        {
+          "latencyAvg": "3.45ms",
+          "latencyStdev": "2.87ms",
+          "latencyMax": "44.92ms",
+          "totalRequests": 13232640,
+          "startTime": 1775052856,
+          "endTime": 1775052871
+        },
+        {
+          "latencyAvg": "11.04ms",
+          "latencyStdev": "7.78ms",
+          "latencyMax": "87.50ms",
+          "totalRequests": 13315664,
+          "startTime": 1775052873,
+          "endTime": 1775052888
+        },
+        {
+          "latencyAvg": "45.56ms",
+          "latencyStdev": "30.49ms",
+          "latencyMax": "266.16ms",
+          "totalRequests": 12616560,
+          "startTime": 1775052890,
+          "endTime": 1775052906
+        },
+        {
+          "latencyAvg": "161.14ms",
+          "latencyStdev": "95.01ms",
+          "latencyMax": "551.05ms",
+          "totalRequests": 7640368,
+          "startTime": 1775052908,
+          "endTime": 1775052923
+        }
+      ],
+      "axum": [
+        {
+          "latencyAvg": "4.29ms",
+          "latencyStdev": "3.75ms",
+          "latencyMax": "57.11ms",
+          "totalRequests": 10970384,
+          "startTime": 1775053575,
+          "endTime": 1775053590
+        },
+        {
+          "latencyAvg": "14.57ms",
+          "latencyStdev": "10.91ms",
+          "latencyMax": "116.91ms",
+          "totalRequests": 11145568,
+          "startTime": 1775053592,
+          "endTime": 1775053607
+        },
+        {
+          "latencyAvg": "52.82ms",
+          "latencyStdev": "35.57ms",
+          "latencyMax": "253.59ms",
+          "totalRequests": 11447232,
+          "startTime": 1775053609,
+          "endTime": 1775053624
+        },
+        {
+          "latencyAvg": "200.75ms",
+          "latencyStdev": "130.33ms",
+          "latencyMax": "852.96ms",
+          "totalRequests": 7577872,
+          "startTime": 1775053626,
+          "endTime": 1775053642
+        }
+      ],
+      "basolato": [
+        {
+          "latencyAvg": "11.67ms",
+          "latencyStdev": "8.75ms",
+          "latencyMax": "137.29ms",
+          "totalRequests": 3426544,
+          "startTime": 1775054575,
+          "endTime": 1775054590
+        },
+        {
+          "latencyAvg": "45.46ms",
+          "latencyStdev": "33.17ms",
+          "latencyMax": "974.71ms",
+          "totalRequests": 3354144,
+          "startTime": 1775054592,
+          "endTime": 1775054607
+        },
+        {
+          "latencyAvg": "229.48ms",
+          "latencyStdev": "539.65ms",
+          "latencyMax": "7.96s",
+          "totalRequests": 3334480,
           "connect": 0,
           "read": 0,
           "write": 0,
-          "timeout": 656,
-          "startTime": 1774636222,
-          "endTime": 1774636237
+          "timeout": 104,
+          "startTime": 1775054609,
+          "endTime": 1775054625
         },
         {
-          "latencyAvg": "3.18s",
-          "latencyStdev": "1.56s",
-          "latencyMax": "7.96s",
-          "totalRequests": 374253,
+          "latencyAvg": "572.51ms",
+          "latencyStdev": "350.59ms",
+          "latencyMax": "7.93s",
+          "totalRequests": 2583536,
           "connect": 0,
-          "read": 473,
+          "read": 0,
           "write": 0,
-          "timeout": 347,
-          "startTime": 1774636239,
-          "endTime": 1774636255
+          "timeout": 24,
+          "startTime": 1775054627,
+          "endTime": 1775054642
+        }
+      ],
+      "deno": [
+        {
+          "latencyAvg": "23.54ms",
+          "latencyStdev": "12.62ms",
+          "latencyMax": "83.22ms",
+          "totalRequests": 1622384,
+          "startTime": 1775054949,
+          "endTime": 1775054964
+        },
+        {
+          "latencyAvg": "98.44ms",
+          "latencyStdev": "78.54ms",
+          "latencyMax": "569.70ms",
+          "totalRequests": 1911056,
+          "startTime": 1775054966,
+          "endTime": 1775054981
+        },
+        {
+          "latencyAvg": "414.14ms",
+          "latencyStdev": "230.34ms",
+          "latencyMax": "1.30s",
+          "totalRequests": 1372401,
+          "startTime": 1775054983,
+          "endTime": 1775054998
+        },
+        {
+          "latencyAvg": "1.67s",
+          "latencyStdev": "996.67ms",
+          "latencyMax": "4.62s",
+          "totalRequests": 969745,
+          "startTime": 1775055000,
+          "endTime": 1775055016
+        }
+      ],
+      "django": [
+        {
+          "totalRequests": 256,
+          "startTime": 1775055796,
+          "endTime": 1775055811
+        },
+        {
+          "totalRequests": 1024,
+          "startTime": 1775055813,
+          "endTime": 1775055828
+        },
+        {
+          "totalRequests": 4096,
+          "startTime": 1775055830,
+          "endTime": 1775055846
+        },
+        {
+          "totalRequests": 0,
+          "startTime": 1775055848,
+          "endTime": 1775055863
+        }
+      ],
+      "echo": [
+        {
+          "latencyAvg": "101.79ms",
+          "latencyStdev": "115.16ms",
+          "latencyMax": "1.44s",
+          "totalRequests": 1058268,
+          "startTime": 1775056634,
+          "endTime": 1775056649
+        },
+        {
+          "latencyAvg": "536.10ms",
+          "latencyStdev": "489.53ms",
+          "latencyMax": "4.54s",
+          "totalRequests": 1052410,
+          "startTime": 1775056651,
+          "endTime": 1775056666
+        },
+        {
+          "latencyAvg": "1.48s",
+          "latencyStdev": "1.24s",
+          "latencyMax": "7.94s",
+          "totalRequests": 1074350,
+          "connect": 0,
+          "read": 0,
+          "write": 0,
+          "timeout": 21,
+          "startTime": 1775056668,
+          "endTime": 1775056684
+        },
+        {
+          "latencyAvg": "1.78s",
+          "latencyStdev": "1.53s",
+          "latencyMax": "7.99s",
+          "totalRequests": 966950,
+          "connect": 0,
+          "read": 0,
+          "write": 0,
+          "timeout": 161,
+          "startTime": 1775056686,
+          "endTime": 1775056701
+        }
+      ],
+      "fastapi": [
+        {
+          "latencyAvg": "92.53ms",
+          "latencyStdev": "60.04ms",
+          "latencyMax": "485.25ms",
+          "totalRequests": 379098,
+          "startTime": 1775057486,
+          "endTime": 1775057501
+        },
+        {
+          "latencyAvg": "280.99ms",
+          "latencyStdev": "200.04ms",
+          "latencyMax": "1.16s",
+          "totalRequests": 393571,
+          "startTime": 1775057503,
+          "endTime": 1775057518
+        },
+        {
+          "latencyAvg": "875.16ms",
+          "latencyStdev": "866.53ms",
+          "latencyMax": "7.99s",
+          "totalRequests": 377953,
+          "connect": 0,
+          "read": 0,
+          "write": 0,
+          "timeout": 373,
+          "startTime": 1775057520,
+          "endTime": 1775057536
+        },
+        {
+          "latencyAvg": "3.20s",
+          "latencyStdev": "1.69s",
+          "latencyMax": "8.00s",
+          "totalRequests": 290479,
+          "connect": 0,
+          "read": 0,
+          "write": 0,
+          "timeout": 534,
+          "startTime": 1775057538,
+          "endTime": 1775057553
+        }
+      ],
+      "gin": [
+        {
+          "latencyAvg": "169.84ms",
+          "latencyStdev": "154.16ms",
+          "latencyMax": "1.65s",
+          "totalRequests": 1044040,
+          "startTime": 1775058345,
+          "endTime": 1775058360
+        },
+        {
+          "latencyAvg": "710.02ms",
+          "latencyStdev": "608.32ms",
+          "latencyMax": "4.97s",
+          "totalRequests": 1089275,
+          "startTime": 1775058362,
+          "endTime": 1775058378
+        },
+        {
+          "latencyAvg": "2.10s",
+          "latencyStdev": "1.67s",
+          "latencyMax": "7.98s",
+          "totalRequests": 1086194,
+          "connect": 0,
+          "read": 0,
+          "write": 0,
+          "timeout": 394,
+          "startTime": 1775058380,
+          "endTime": 1775058395
+        },
+        {
+          "latencyAvg": "1.87s",
+          "latencyStdev": "1.67s",
+          "latencyMax": "8.00s",
+          "totalRequests": 960016,
+          "connect": 0,
+          "read": 0,
+          "write": 0,
+          "timeout": 166,
+          "startTime": 1775058397,
+          "endTime": 1775058413
+        }
+      ],
+      "hono": [
+        {
+          "latencyAvg": "53.95ms",
+          "latencyStdev": "83.64ms",
+          "latencyMax": "1.27s",
+          "totalRequests": 890212,
+          "startTime": 1775058604,
+          "endTime": 1775058619
+        },
+        {
+          "latencyAvg": "515.34ms",
+          "latencyStdev": "1.16s",
+          "latencyMax": "7.99s",
+          "totalRequests": 794617,
+          "connect": 0,
+          "read": 0,
+          "write": 0,
+          "timeout": 233,
+          "startTime": 1775058621,
+          "endTime": 1775058637
+        },
+        {
+          "latencyAvg": "448.62ms",
+          "latencyStdev": "984.09ms",
+          "latencyMax": "7.97s",
+          "totalRequests": 874062,
+          "connect": 0,
+          "read": 146,
+          "write": 0,
+          "timeout": 222,
+          "startTime": 1775058639,
+          "endTime": 1775058654
+        },
+        {
+          "latencyAvg": "544.47ms",
+          "latencyStdev": "485.34ms",
+          "latencyMax": "7.90s",
+          "totalRequests": 654011,
+          "connect": 0,
+          "read": 81,
+          "write": 0,
+          "timeout": 48,
+          "startTime": 1775058656,
+          "endTime": 1775058672
+        }
+      ],
+      "jester": [
+        {
+          "latencyAvg": "4.54ms",
+          "latencyStdev": "3.92ms",
+          "latencyMax": "58.85ms",
+          "totalRequests": 10228176,
+          "startTime": 1775058943,
+          "endTime": 1775058959
+        },
+        {
+          "latencyAvg": "17.25ms",
+          "latencyStdev": "12.97ms",
+          "latencyMax": "162.62ms",
+          "totalRequests": 9446128,
+          "startTime": 1775058961,
+          "endTime": 1775058976
+        },
+        {
+          "latencyAvg": "67.93ms",
+          "latencyStdev": "115.02ms",
+          "latencyMax": "3.84s",
+          "totalRequests": 9915072,
+          "startTime": 1775058978,
+          "endTime": 1775058993
+        },
+        {
+          "latencyAvg": "201.89ms",
+          "latencyStdev": "134.39ms",
+          "latencyMax": "4.27s",
+          "totalRequests": 6617808,
+          "startTime": 1775058995,
+          "endTime": 1775059011
+        }
+      ],
+      "laravel": [
+        {
+          "latencyAvg": "1.26s",
+          "latencyStdev": "961.91ms",
+          "latencyMax": "5.03s",
+          "totalRequests": 34858,
+          "startTime": 1775059935,
+          "endTime": 1775059951
+        },
+        {
+          "latencyAvg": "2.17s",
+          "latencyStdev": "2.11s",
+          "latencyMax": "7.99s",
+          "totalRequests": 34785,
+          "connect": 0,
+          "read": 0,
+          "write": 0,
+          "timeout": 221,
+          "startTime": 1775059953,
+          "endTime": 1775059968
+        },
+        {
+          "latencyAvg": "2.61s",
+          "latencyStdev": "2.61s",
+          "latencyMax": "7.90s",
+          "totalRequests": 34269,
+          "connect": 0,
+          "read": 0,
+          "write": 0,
+          "timeout": 183,
+          "startTime": 1775059970,
+          "endTime": 1775059985
+        },
+        {
+          "totalRequests": 15821,
+          "startTime": 1775059987,
+          "endTime": 1775060003
+        }
+      ],
+      "rails": [
+        {
+          "latencyAvg": "85.15ms",
+          "latencyStdev": "65.86ms",
+          "latencyMax": "694.07ms",
+          "totalRequests": 513154,
+          "startTime": 1775060968,
+          "endTime": 1775060983
+        },
+        {
+          "latencyAvg": "403.13ms",
+          "latencyStdev": "378.19ms",
+          "latencyMax": "3.80s",
+          "totalRequests": 421075,
+          "startTime": 1775060985,
+          "endTime": 1775061000
+        },
+        {
+          "latencyAvg": "1.39s",
+          "latencyStdev": "963.36ms",
+          "latencyMax": "8.00s",
+          "totalRequests": 387723,
+          "connect": 0,
+          "read": 0,
+          "write": 0,
+          "timeout": 694,
+          "startTime": 1775061002,
+          "endTime": 1775061017
+        },
+        {
+          "latencyAvg": "2.96s",
+          "latencyStdev": "1.40s",
+          "latencyMax": "7.98s",
+          "totalRequests": 286166,
+          "connect": 0,
+          "read": 277,
+          "write": 0,
+          "timeout": 121,
+          "startTime": 1775061019,
+          "endTime": 1775061035
         }
       ]
     },
     "cached-query": {
+      "basolato": [
+        {
+          "latencyAvg": "6.86ms",
+          "latencyStdev": "4.55ms",
+          "latencyMax": "73.57ms",
+          "totalRequests": 1152871,
+          "startTime": 1775054675,
+          "endTime": 1775054691
+        },
+        {
+          "latencyAvg": "8.09ms",
+          "latencyStdev": "5.36ms",
+          "latencyMax": "110.26ms",
+          "totalRequests": 985439,
+          "startTime": 1775054693,
+          "endTime": 1775054708
+        },
+        {
+          "latencyAvg": "8.42ms",
+          "latencyStdev": "5.07ms",
+          "latencyMax": "78.26ms",
+          "totalRequests": 935572,
+          "startTime": 1775054710,
+          "endTime": 1775054725
+        },
+        {
+          "latencyAvg": "12.74ms",
+          "latencyStdev": "8.26ms",
+          "latencyMax": "183.37ms",
+          "totalRequests": 633572,
+          "startTime": 1775054727,
+          "endTime": 1775054742
+        },
+        {
+          "latencyAvg": "15.97ms",
+          "latencyStdev": "8.62ms",
+          "latencyMax": "240.73ms",
+          "totalRequests": 496230,
+          "startTime": 1775054744,
+          "endTime": 1775054759
+        }
+      ],
       "rails": [
         {
-          "latencyAvg": "75.55ms",
-          "latencyStdev": "30.56ms",
-          "latencyMax": "222.51ms",
-          "totalRequests": 101930,
-          "startTime": 1774636287,
-          "endTime": 1774636302
+          "latencyAvg": "101.31ms",
+          "latencyStdev": "41.60ms",
+          "latencyMax": "403.55ms",
+          "totalRequests": 76312,
+          "startTime": 1775061068,
+          "endTime": 1775061083
         },
         {
-          "latencyAvg": "90.88ms",
-          "latencyStdev": "31.95ms",
-          "latencyMax": "428.42ms",
-          "totalRequests": 84543,
-          "startTime": 1774636304,
-          "endTime": 1774636320
+          "latencyAvg": "128.50ms",
+          "latencyStdev": "55.54ms",
+          "latencyMax": "425.96ms",
+          "totalRequests": 60166,
+          "startTime": 1775061085,
+          "endTime": 1775061100
         },
         {
-          "latencyAvg": "111.00ms",
-          "latencyStdev": "33.40ms",
-          "latencyMax": "363.16ms",
-          "totalRequests": 69057,
-          "startTime": 1774636322,
-          "endTime": 1774636337
+          "latencyAvg": "144.53ms",
+          "latencyStdev": "61.32ms",
+          "latencyMax": "455.30ms",
+          "totalRequests": 53308,
+          "startTime": 1775061102,
+          "endTime": 1775061117
         },
         {
-          "latencyAvg": "160.96ms",
-          "latencyStdev": "45.28ms",
-          "latencyMax": "442.22ms",
-          "totalRequests": 47543,
-          "startTime": 1774636339,
-          "endTime": 1774636354
+          "latencyAvg": "212.96ms",
+          "latencyStdev": "76.48ms",
+          "latencyMax": "805.26ms",
+          "totalRequests": 36113,
+          "startTime": 1775061119,
+          "endTime": 1775061134
         },
         {
-          "latencyAvg": "210.98ms",
-          "latencyStdev": "75.00ms",
-          "latencyMax": "859.31ms",
-          "totalRequests": 36504,
-          "startTime": 1774636356,
-          "endTime": 1774636371
+          "latencyAvg": "282.24ms",
+          "latencyStdev": "90.18ms",
+          "latencyMax": "954.03ms",
+          "totalRequests": 27130,
+          "startTime": 1775061136,
+          "endTime": 1775061151
         }
       ]
     },
     "commitCounts": {
-      "laravel": 0,
+      "none": 0,
+      "django": 0,
+      "echo": 0,
+      "gin": 0,
+      "hono": 0,
       "rails": 0
     },
     "slocCounts": {
+      "actix": 1537,
+      "axum": 1654,
+      "basolato": 333,
       "none": 68,
+      "django": 407,
       "echo": 286,
       "fastapi": 761,
+      "gin": 593,
+      "hono": 326,
+      "jester": 82,
       "laravel": 1668,
       "rails": 703
     }
   },
   "completed": {
-    "deno": "20260327172940",
-    "echo": "20260327174346",
-    "fastapi": "20260327175749",
-    "laravel": "20260327181356",
-    "rails": "20260327183253"
+    "actix": "20260401141526",
+    "axum": "20260401142724",
+    "basolato": "20260401144601",
+    "deno": "20260401145018",
+    "django": "20260401150425",
+    "echo": "20260401151824",
+    "fastapi": "20260401153236",
+    "gin": "20260401154655",
+    "hono": "20260401155115",
+    "jester": "20260401155653",
+    "laravel": "20260401161325",
+    "rails": "20260401163234"
   },
   "succeeded": {
     "db": [
+      "basolato",
+      "django",
       "echo",
       "fastapi",
+      "gin",
       "laravel",
       "rails"
     ],
     "fortune": [
+      "basolato",
+      "django",
       "echo",
       "fastapi",
+      "gin",
       "laravel",
       "rails"
     ],
     "query": [
+      "basolato",
+      "django",
       "echo",
       "fastapi",
+      "gin",
       "laravel",
       "rails"
     ],
     "update": [
+      "django",
       "echo",
       "fastapi",
+      "gin",
       "laravel",
       "rails"
     ],
     "json": [
+      "actix",
+      "axum",
+      "basolato",
       "deno",
+      "django",
       "echo",
       "fastapi",
+      "gin",
+      "hono",
+      "jester",
       "laravel",
       "rails"
     ],
     "plaintext": [
+      "actix",
+      "axum",
+      "basolato",
       "deno",
+      "django",
       "echo",
       "fastapi",
+      "gin",
+      "hono",
+      "jester",
       "laravel",
       "rails"
     ],
     "cached-query": [
+      "basolato",
       "rails"
     ]
   },
@@ -1368,14 +2560,41 @@
     "db": [],
     "fortune": [],
     "query": [],
-    "update": [],
+    "update": [
+      "basolato"
+    ],
     "json": [],
     "plaintext": [],
     "cached-query": []
   },
   "verify": {
+    "actix": {
+      "json": "pass",
+      "plaintext": "pass"
+    },
+    "axum": {
+      "json": "pass",
+      "plaintext": "pass"
+    },
+    "basolato": {
+      "db": "pass",
+      "json": "pass",
+      "query": "pass",
+      "update": "fail",
+      "fortune": "pass",
+      "plaintext": "pass",
+      "cached-query": "pass"
+    },
     "deno": {
       "json": "pass",
+      "plaintext": "pass"
+    },
+    "django": {
+      "db": "warn",
+      "json": "pass",
+      "query": "pass",
+      "update": "pass",
+      "fortune": "pass",
       "plaintext": "pass"
     },
     "echo": {
@@ -1392,6 +2611,22 @@
       "query": "pass",
       "update": "pass",
       "fortune": "pass",
+      "plaintext": "pass"
+    },
+    "gin": {
+      "db": "pass",
+      "json": "pass",
+      "query": "pass",
+      "update": "pass",
+      "fortune": "pass",
+      "plaintext": "pass"
+    },
+    "hono": {
+      "json": "pass",
+      "plaintext": "pass"
+    },
+    "jester": {
+      "json": "pass",
       "plaintext": "pass"
     },
     "laravel": {
@@ -2592,13 +3827,13 @@
       "framework": "basolato",
       "language": "nim",
       "orm": "full",
-      "platform": "asynchttpserver",
+      "platform": "httpbeast",
       "webserver": "none",
       "os": "linux",
       "database_os": "linux",
       "display_name": "Basolato",
       "notes": "",
-      "versus": "httpbeast, prologue",
+      "versus": "jester, prologue",
       "tags": []
     },
     {
@@ -7316,6 +8551,26 @@
       "notes": "",
       "versus": "servlet",
       "tags": []
+    },
+    {
+      "project_name": "jester",
+      "name": "jester",
+      "approach": "realistic",
+      "classification": "micro",
+      "database": "none",
+      "framework": "jester",
+      "language": "nim",
+      "orm": "none",
+      "platform": "none",
+      "webserver": "none",
+      "os": "linux",
+      "database_os": "linux",
+      "display_name": "Jester",
+      "notes": "",
+      "versus": "httpbeast",
+      "tags": [
+        ""
+      ]
     },
     {
       "project_name": "jetty",
